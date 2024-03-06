@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>fieldset 태그</title>
+<meta charset="UTF-8">
+<style>
+    button {
+        cursor: pointer;
+    }
+
+    [type='submit'], [type='reset'] {
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <form metho="GET" action="result.html">
+        <fieldset>
+            <legend>개인 정보 입력</legend>
+            <p>이름 : <input type="text" name="name"></p>
+            <p>학교 : <input type="text" name="school"></p>
+            <!-- 
+                <input type="reset" value="reset">
+                <input type="submit" value="submit">
+            -->
+            <button type="reset">reset</button>
+            <button type="submit">제출</button>
+            <button type="button" id="btn">눌러봐!</button>
+            <p>
+                <button type="button" id="jennie"><img src="../img/chopper.jpg" width="80" height="auto"></button>
+            </p>
+        </fieldset>
+    </form>
+<script type="text/javascript">
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        alert('참 잘했어요!');
+    };
+
+    var btn2 = document.getElementById('jennie');
+    btn2.onclick = function(){
+        location.href = 'result.html';
+    };
+</script>
+</body>
+</html>

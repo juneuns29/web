@@ -5,37 +5,41 @@
 <meta charset="UTF-8">
 </head>
 <body>
-    <form method="GET" action="result.html" style="text-align: center;">
+    <form method="POST" action="result.html" style="text-align: center;">
         <div style="display: inline-block; width: 600px;">
             <h1 style="background-color: rgb(0, 166, 255); color: white; padding: 10px;">Input Tag</h1>
             <div>
                 <label for="id">
                     <h2 style="display: inline-block; text-align: right; width: 120px; color: gray;">아이디 : </h2>
                 </label>
-                <input type="text" name="id" id="id" style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
+                <input type="text" name="id" id="id" required placeholder="아이디를 입력하세요!"
+                    style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
             </div>
             <div>
                 <h2 style="display: inline-block; text-align: right; width: 120px; color: gray;">비밀번호 : </h2>
-                <input type="password" name="pw" style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
+                <input type="password" name="pw" required placeholder="비밀번호를 입력하세요!"
+                    style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
             </div>
             <div>
                 <h2 style="display: inline-block; text-align: right; width: 120px; color: gray;">이메일 : </h2>
-                <input type="text" name="mail" style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
+                <input type="text" name="mail" required placeholder="메일주소를 입력하세요!"
+                    style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
             </div>
             <div>
                 <h2 style="display: inline-block; text-align: right; width: 120px; color: gray;">전화번호 : </h2>
-                <input type="text" name="tel" style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
+                <input type="text" name="tel" required placeholder="휴대폰 번호를 입력하세요!"
+                    style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
             </div>
             <div>
                 <h2 style="display: inline-block; text-align: right; width: 120px; color: gray;">성별 : </h2>
                 <div style="display: inline-block; width: 140px; height: 35px; text-align: center;">
-                    <input type="radio" name="gen" id="F" value="여자">
+                    <input type="radio" name="gen" id="F" value="F">
                     <label for="F">
                         <h2 style="display: inline-block; width: 60px; color: gray;">여자</h2>
                     </label>
                 </div>
                 <div style="display: inline-block; width: 140px; height: 35px; text-align: center;">
-                    <input type="radio" name="gen" id="M" value="남자">
+                    <input type="radio" name="gen" id="M" value="M">
                     <label for="M">
                         <h2 style="display: inline-block; width: 60px; color: gray;">남자</h2>
                     </label>
@@ -47,7 +51,6 @@
                     <input type="radio" name="loc"> 일산
                     <input type="radio" name="loc"> 부평
                 -->
-                
             </div>
             <div>
                 <div>
@@ -56,11 +59,11 @@
                 </div>
                 <div style="display: inline-block; text-align: right; width: 120px;""></div>
                 <ul style="display: inline-block; width: 280px; list-style-type: none; text-align: left; margin-top: 0px;">
-                    <li><input type="checkbox" name="fab"> 자바</li>
-                    <li><input type="checkbox" name="fab"> 오라클</li>
-                    <li><input type="checkbox" name="fab"> HTML</li>
-                    <li><input type="checkbox" name="fab"> Python</li>
-                    <li><input type="checkbox" name="fab"> R</li>
+                    <li><input type="checkbox" name="fab" value="java">자바</li>
+                    <li><input type="checkbox" name="fab" value="db">오라클</li>
+                    <li><input type="checkbox" name="fab" value="html">HTML</li>
+                    <li><input type="checkbox" name="fab" value="python">Python</li>
+                    <li><input type="checkbox" name="fab" value="r">R</li>
                 </ul>
             </div>
             <div>
@@ -68,6 +71,7 @@
                 <select name="sub" style="width: 280px; height: 35px; border: 1px solid lightgray; padding-left: 15px;">
                     <option value="java">자바</option>
                     <option value="db">오라클</option>
+                    <option selected>*** 현재 과목 ***</option>
                     <option value="html">웹</option>
                     <option value="spring">스프링</option>
                     <option value="python">파이썬</option>
@@ -76,8 +80,8 @@
             </div>
             <div style="text-align: left;">
                 <h2 style="float: left; position: relative; left: 95px; text-align: right; width: 120px; color: gray;">기타 : </h2>
-                <textarea name="etc" rows="10" cols="37" 
-                    style="clear: left; position: relative; left: 100px; top: 25px; display: inline-block; border: 1px solid lightgray; resize: none;" ></textarea>
+                <textarea name="etc" rows="7" cols="34" placeholder="기타 사항을 입력하세요!"
+                    style="clear: left; position: relative; left: 100px; top: 25px; display: inline-block; border: 1px solid lightgray; resize: none; padding: 10px;" ></textarea>
             </div>
             <div style="margin-top: 35px;">
                 <input type="reset" value="RESET" 

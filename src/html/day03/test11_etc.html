@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>버튼 만들기</title>
+<meta charset="UTF-8">
+<style>
+    .fr {
+        text-align: center;
+    }
+
+    .content {
+        display: inline-block;
+        width: 600px;
+    }
+    h1 {
+        background-color: rgb(0, 157, 255);
+        padding: 10px;
+        color: white;
+    }
+
+    #d1 > img {
+        width: 300px;
+        height: auto;
+        border: 10px dotted pink;
+    }
+
+    .btn {
+        width: 50%;
+        height: 50px;
+        float: left;
+        cursor: pointer;
+        line-height: 300%;
+        margin-top: 30px;
+    }
+
+    #btn1 {
+        background-color: orange;
+    }
+    #btn2 {
+        background-color: purple;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="fr">
+        <div class="content">
+            <h1>버튼 만들기</h1>
+            <div id="d1">
+                <img src="../img/chopper.jpg">
+            </div>
+            <div>
+                <div class="btn" id="btn1">클릭1</div>
+                <div class="btn" id="btn2">클릭2</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
