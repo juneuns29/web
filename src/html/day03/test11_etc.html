@@ -47,7 +47,7 @@
         <div class="content">
             <h1>버튼 만들기</h1>
             <div id="d1">
-                <img src="../img/chopper.jpg">
+                <img src="../img/chopper.jpg" id="img">
             </div>
             <div>
                 <div class="btn" id="btn1">클릭1</div>
@@ -55,5 +55,13 @@
             </div>
         </div>
     </div>
+<script type="text/javascript">
+    document.getElementById('btn1').onclick = function(){
+        document.getElementById('img').setAttribute('src', '../img/chopper02.jpg');
+    };
+    document.getElementById('btn2').onclick = function(){
+        alert('내일 이어서 하겟습니다.')
+    };
+</script>
 </body>
 </html>
