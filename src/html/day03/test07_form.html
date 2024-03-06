@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Tag</title>
+<meta charset="UTF-8">
+<style>
+    input {
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <div style="display: inline-block; width: 600px;">
+            <h1 style="background-color: rgb(24, 139, 255); color: white; padding: 7px;">
+                Form Tag
+            </h1>
+            <form method="POST" action="result.html" style="padding: 10px;">
+                <div>
+                    <h4 style="display: inline-block; width: 20%; height: 40px; text-align: right">USER : </h4>
+                    <input type="text" name="user" 
+                        style="display: inline-block; width: 70%; height: 40px; border: 1px solid lightgray;">
+                </div>
+                <div>
+                    <h4 style="display: inline-block; width: 20%; height: 40px; text-align: right">DEPT : </h4>
+                    <input type="text" name="dept" 
+                        style="display: inline-block; width: 70%; height: 40px; border: 1px solid lightgray;">
+                </div>
+                <div style="margin-top: 50px;">
+                    <input type="reset" value="RESET" 
+                            style="width: 50%; height: 40px; background-color: orange; float: left; border: 0px;">
+                    <input type="submit" value="제출" 
+                            style="width: 50%; height: 40px; background-color: rgb(0, 153, 255); float: left; border: 0px;">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
