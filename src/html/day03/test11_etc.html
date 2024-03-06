@@ -60,7 +60,9 @@
         document.getElementById('img').setAttribute('src', '../img/chopper02.jpg');
     };
     document.getElementById('btn2').onclick = function(){
-        alert('내일 이어서 하겟습니다.')
+        var el = document.getElementsByTagName('h1');
+        el[0].innerHTML = 'Bye Bye!';
+        alert('내일 이어서 하겟습니다.');
     };
 </script>
 </body>
