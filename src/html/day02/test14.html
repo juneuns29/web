@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>셀 별합 2</title>
+<meta charset="UTF-8">
+
+</head>
+<body>
+    <section>
+        <article>
+            <table border="1" style="width: 50%">
+                <caption>셀 병합 2</caption>
+                <thead>
+                    <tr>
+                        <th>1열</th>
+                        <th>2열</th>
+                        <th>3열</th>
+                        <th>4열</th>
+                        <th>5열</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>일반셀</td>
+                        <td colspan="2" style="background-color: aquamarine;">병합셀</td>
+                        <td rowspan="2" style="background-color: aquamarine;">행병합셀</td>
+                        <td>일반셀</td>
+                    </tr>
+                    <tr>
+                        <td>일반셀</td>
+                        <td>일반셀</td>
+                        <td>일반셀</td>
+                        <td>일반셀</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" style="background-color: aquamarine;">행병합셀</td>
+                        <td>일반셀</td>
+                        <td colspan="3" style="background-color: aquamarine;">열 병합 셀</td>
+                    </tr>
+                    <tr>
+                        <td>일반셀</td>
+                        <td>일반셀</td>
+                        <td>일반셀</td>
+                        <td>일반셀</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="5">테이블 셀 병합 예제</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+    </section>
+</body>
+</html>
