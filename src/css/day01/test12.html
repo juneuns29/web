@@ -57,6 +57,17 @@
         height: 30px;
     }
 
+    label.ttl {
+        display: inline-block;
+        width: 200px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .fr > div {
+        text-align: left;
+    }
+
     .d3 {
         display: inline-block;
         width: 100px;
@@ -72,27 +83,36 @@
     
     .d3:active {
         background-color: rgb(255, 0, 85);
-        width: 300px;
+        width: 100%;
     }
 
+    .dfr {
+        text-align: center;
+    }
+
+    .dd {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
 </style>
 </head>
 <body>
     <form class="fr" method="GET" action="result.html">
         <div>
-            <label for="id">I D :</label>
+            <label for="id" class="ttl">I D :</label>
             <input type="text" name="id" id="id" value="jennie" readonly>
         </div>
         <div>
-            <label for="pw">P W :</label>
+            <label for="pw" class="ttl">P W :</label>
             <input type="password" name="pw" id="pw" value="12345" disabled>
         </div>
         <div>
-            <label for="mail">MAIL :</label>
+            <label for="mail" class="ttl">MAIL :</label>
             <input type="text" name="mail" id="mail">
         </div>
         <div>
-            <label for="">GENDER :</label>
+            <label for="" class="ttl">GENDER :</label>
             <div class="d1">
                 <div class="d2">
                     <input type="radio" name="gen" value="F" id="F">
@@ -105,7 +125,11 @@
             </div>
         </div>
 
-        <div class="d3"><p> </p></div>
+        <div>
+            <div class="dfr">
+                <div class="d3"></div>
+            </div>
+        </div>
 
         <div>
             <button type="submit">submit</button>
