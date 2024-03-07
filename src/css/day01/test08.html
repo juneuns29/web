@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>클래스 선택자</title>
+<meta charset="UTF-8">
+<style type="text/css">
+    h3.class1 {
+        /* h3태그중 클래스가 class1 인 태그 선택 */
+        color: navy;
+        background-color: pink;
+    }
+
+    .class1 {
+        color: blue;
+        background-color: yellow;
+    }
+
+    .class2 {
+        color: red;
+        background-color: green;
+    }
+
+    h1 {
+        background-color: lightgray;
+        color: orange;
+    }
+</style>
+</head>
+<body>
+    <h1 class="class1">Class 1 입니다.</h1>
+    <p class="class1">Class 1 입니다.</p>
+    <h1 class="class2">Class 2 입니다.</h1>
+    <p class="class2">Class 2 입니다.</p>
+    <h3 class="class1">Element + Class 선택자</h3>
+    <h3 class="class2">Class 2 입니다.</h3>
+</body>
+</html>
