@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>가상 선택자</title>
+<meta charset="UTF-8">
+<style type="text/css">
+    .fr {
+        width: 600px;
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    a:link {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: red;
+    }
+
+    a:hover {
+        text-decoration: overline;
+    }
+
+    a:active {
+        background-color: yellow;
+    }
+
+    div.d1 {
+        /* div 태그중 클래스가 d1인 태그 */
+        border: 1px dashed red;
+        width: 400px;
+        padding: 5px;
+    }
+
+    div.d1:hover {
+        background-color: yellow;
+    }
+
+    div.d2 {
+        border: 1px dashed green;
+        width: 400px;
+        padding: 5px;
+    }
+
+    div.d2:hover {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: greenyellow;;
+    }
+
+</style>
+</head>
+<body>
+    <div class="fr">
+        <h1>가상 선택자</h1>
+        <p>
+            <a href="http://www.w3.org" target="_blank">W3방문</a><br>
+            <span>==> 마우스 이벤트에 따른 링크의 변화를 살펴보세요.</span>
+        </p>
+        <p>
+            <a href="http://www.amazon.com" target="_blank">아마존 방문</a><br>
+            <span>==> 마우스 이벤트에 따른 링크의 변화를 살펴보세요.</span>
+        </p>
+        <div class="d1">
+            <h3>가상 클래스 1 영역</h3>
+            <span>마우스 위치에 따른 스타일 변화를 살펴보세요.</span>
+        </div>
+        <div class="d2">
+            <h3>가상 클래스 2 영역</h3>
+            <span>마우스 위치에 따른 박스의 스타일 변환 살펴보세요.</span>
+        </div>
+    </div>
+</body>
+</html>

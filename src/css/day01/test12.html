@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>입력 태그 속성</title>
+<meta charset="UTF-8">
+<style type="text/css">
+    .fr {
+        width: 600px;
+        margin: 0px auto;
+        text-align: center;
+    }
+    [type="submit"] {
+        border: none;
+        height: 30px;
+        width: 100%;
+        background-color: aquamarine;
+    }
+
+    input[type="text"]:enabled {
+        height: 20px;
+        width: 200px;
+        font-size: 14pt;
+        padding: 10px;
+    }
+
+    input:disabled {
+        height: 20px;
+        width: 200px;
+        font-size: 14pt;
+        padding: 10px;
+        background-color: gray;
+    }
+
+    input[type="text"], [type="password"], .d1 {
+        margin-top: 10px;
+    }
+
+    button {
+        margin-top: 30px;
+    }
+
+    .d1 {
+        display: inline-block;
+        width: 200px;
+        height: 20px;
+        text-align: center;
+    }
+
+    .d2 {
+        display: inline-block;
+        width: 90px;
+        height: 20px;
+    }
+
+    input:checked {
+        width: 30px;
+        height: 30px;
+    }
+
+    .d3 {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid orange;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .d3:hover {
+        background-color: yellowgreen;
+    }
+    
+    .d3:active {
+        background-color: rgb(255, 0, 85);
+        width: 300px;
+    }
+
+</style>
+</head>
+<body>
+    <form class="fr" method="GET" action="result.html">
+        <div>
+            <label for="id">I D :</label>
+            <input type="text" name="id" id="id" value="jennie" readonly>
+        </div>
+        <div>
+            <label for="pw">P W :</label>
+            <input type="password" name="pw" id="pw" value="12345" disabled>
+        </div>
+        <div>
+            <label for="mail">MAIL :</label>
+            <input type="text" name="mail" id="mail">
+        </div>
+        <div>
+            <label for="">GENDER :</label>
+            <div class="d1">
+                <div class="d2">
+                    <input type="radio" name="gen" value="F" id="F">
+                    <label for="F"> 여자</label>
+                </div>
+                <div class="d2">
+                    <input type="radio" name="gen" value="M" id="M">
+                    <label for="M"> 남자</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="d3"><p> </p></div>
+
+        <div>
+            <button type="submit">submit</button>
+        </div>
+    </form>
+</body>
+</html>
