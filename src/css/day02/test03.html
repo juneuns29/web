@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>조합선택자</title>
+<meta charset="UTF-8">
+<style type="text/css">
+    body h3 { /* 1, 2 모두 선택 */
+        color: yellowgreen;
+    }
+
+    body > h3 { /* 2번만 선택 */
+        padding-left: 20px;
+        color: orange;
+    }
+
+    body > p {
+        color: green;
+        background-color: yellow;
+    }
+
+    body > h3 > tel {
+        padding-left: 30px;
+        color: darkgray;
+    }
+
+    tel > office, tel > hp {
+        margin-left: 50px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <h3>Child Selector 1</h3><!-- 1 -->
+    </div>
+    <p>자식 선택자</p>
+    <h3> <!-- 2 -->
+        <sno>123456</sno><br>
+        <std>제니</std><br>
+        <tel>
+            <office>02-4567-1010</office><br>
+            <hp>010-1234-5678</hp>
+        </tel>
+    </h3>
+</body>
+</html>
