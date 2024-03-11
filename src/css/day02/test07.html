@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>테두리 속성 지정</title>
+<meta charset="UTF-8">
+<style type="text/css">
+    div {
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        margin: 10px;
+        background-color: beige;
+        border-width: 20px;
+        border-color: orange;
+    }
+
+    div:first-child {
+        border-style: none;
+    }
+
+    div:nth-child(2) {
+        border-style: hidden;
+    }
+
+    div:nth-child(3) {
+        border-style: dotted;
+    }
+
+    div:nth-child(4) {
+        border-style: dashed;
+    }
+
+    div:nth-child(5) {
+        border-style: solid;
+    }
+
+    div:nth-child(6) {
+        border-style: double;
+    }
+
+    div:nth-child(7) {
+        border-style: groove;
+    }
+
+    div:nth-child(8) {
+        border-style: ridge;
+    }
+
+    div:nth-child(9) {
+        border-style: inset;
+    }
+    div:last-child {
+        border-style: outset;
+    }
+</style>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8</div>
+    <div>div9</div>
+    <div>div10</div>
+</body>
+</html>

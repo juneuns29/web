@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Float</title>
+<meta charset="UTF-8">
+<style type="text/css">
+    #d1 {
+        width: 600px;
+        text-align: center;
+        margin: 0px auto;
+    }
+    h1 {
+        background-color: orange;
+    }
+    .d2 {
+        margin-bottom: 7px;
+    }
+
+    .d2 > div {
+        display: inline-block;
+        width: 180px;
+        height: 180px;
+        border: 1px solid gray;
+    }
+
+    #d4 {
+        float: left;
+        background-color: purple;
+    }
+
+    #d3 {
+        float: right;
+        background-color: indigo;
+        color: white;
+    }
+
+    /* #d1 > :nth-child(2) {} */
+    div:nth-child(2) {
+        background-color: rgb(247, 0, 255);
+        color: white;
+    }
+/*     
+    h1 + .d2 {
+        float: left;
+    }
+     */
+
+    .d2:last-child > div:nth-child(3) {
+        float: left;
+    }
+</style>
+</head>
+<body>
+    <div id="d1">
+        <h1>Float 속성</h1>
+        <div class="d2">
+            <div id="d3">d3</div>
+            <div id="d4">d4</div>
+            <div id="d5">d5</div>
+        </div>
+        <div class="d2">
+            <div id="d6">d6</div>
+            <div id="d7">d7</div>
+            <div id="d8">d8</div>
+        </div>
+        <div class="d2">
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+        </div>
+    </div>
+</body>
+</html>
