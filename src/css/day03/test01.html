@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>선택자 우선순위</title>
+<meta charset="UTF-8">
+<style type="text/css">
+
+    .box {
+        width: 300px;
+        height: 80px;
+        position: absolute;
+    }
+    .d1 {
+        background-color: purple;
+        top: 5px;
+    }
+    .d2 {
+        background-color: rgb(255, 0, 115);
+        top: 20px;
+        left: 50px;
+    }
+    /* 
+        visibility
+        ==> 태그를 화면에서 보여줄지 여부를 결정하는 속성
+
+            visible     : 보여지게
+            hidden      : 감춘다. 하지만 공간은 남아있다.
+            collapse    : 감추고 공간도 남아있지 않게 한다. 
+            initial     : 기본값으로 보여지게 처리
+            inherit     : 상위태그의 속성을 그대로 물려받아서 사용
+
+        display
+        ==> 태그에 대한 표현 형식을 정하는 속성
+            visibility 속성의 hidden과 display 속성의 none은 구분을 해주자.
+
+            none            : 마치 태그를 만들지 않은 것처럼 화면에서 
+                                해당 태그의 공간도 없이 감추는 속성값
+            inline          : 해당 태그를 inline 태그로 만들어준다.
+                                ==> 가로, 세로 사이즈를 줄 수 없다.(img 태그 빼고..)
+            inline-block    : 사이즈도 가질 수 있고 옆에 다른 태그도 올수 있는
+                                inline + block 의 중간정도의 속성
+            block           : 사이즈는 가질 수 있지만 옆에 다른태그가 배치 될 수 없다.
+                                가로사이즈 100%를 모두 사용하기 때문에....
+            flex
+    */
+    .d3 {
+        background-color: rgb(0, 166, 255);
+        top: 40px;
+        left: 100px;
+        z-index: -1;
+    }
+    .d4 {
+        background-color: rgb(221, 255, 0);
+        top: 60px;
+        left: 150px;
+    }
+
+    div { /* 태그로 선택하는 것보다 클래스로 선택하는 것이 우선권이 있다. */
+        width: 100px;
+        height: 500px;
+    }
+</style>
+</head>
+<body>
+<!-- 
+    선택자 우선순위
+
+        선택자의 우선순위는 계산이 필요한데
+        선택자들마다 점수를 부여해서
+        점수가 높은 선택자가 우선권이 있다.
+
+        점수 ]
+
+            !important  : 무한대
+
+            인라인(태그에서 속성을 정의하는 경우)의 경우 : 1000
+
+            id선택자(#아이디)       : 100점
+            클래스선택자(.클래스)   : 10점
+            태그선택자(태그이름)    : 1점
+            전체선택자(*)           : 0점
+            부정선택자(:not())      : 0점
+
+        -------------------------------------------------------------------
+
+            .fr li.list
+            ==> fr 클래스 하위의 클래스가 list인 li태그 모두 선택
+
+                .fr     : 10
+                li      : 1
+                .list   : 10
+            +             21
+
+
+            .list li:hover
+            ==> list클래스 하위의 마우스가 위에 올려진 li태그 모두
+
+                :hover ==> 가상클래스로 간주 10점에 해당
+
+                .list       : 10
+                li          : 1
+                :hover      : 10
+            +                 21
+
+
+            #fr span
+            ==> 아이디가 fr 인 태그 하위의 span태그 모두 선택
+
+                #fr     : 100
+                span    : 1
+            +             101
+
+            div:nth-child(3)
+            ==> 형제중 셋째인 div 태그
+
+                div             : 1
+                nth-child(3)    : 10 <== 가상클래스로 취급
+            +                     11
+
+
+            body *
+            ==> body 태그 내의 모든 태그
+
+                body        : 1
+                *           : 0
+            +                 1
+
+
+            :not(.fr)
+            ==> 클래스가 fr 이 아닌 태그
+
+                :not()       : 0
+                .fr          : 10
+            +                  10
+
+
+        만약 같은 점수라면 나중에 정의한 속성이 적용된다.
+ -->
+
+ <!-- Z-Index -->
+    <div class="box d1">div1</div>
+    <div class="box d2">div2</div>
+    <div class="box d3">div3</div>
+    <div class="box d4">div4</div>
+</body>
+</html>
