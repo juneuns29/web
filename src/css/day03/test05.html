@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radial Gradient</title>
+<meta charset="UTF-8">
+<style type="text/css">
+    .content {
+        width: 800px;
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    h1 {
+        background-color: orange;
+        padding: 10px;
+    }
+
+    .box {
+        display: inline-block;
+        width: 180px;
+        height: 180px;
+        margin: 5px;
+        border: 1px solid gray;
+    }
+
+    /* radial-gradient */
+    #box1 {
+        background: radial-gradient(circle, yellow, red);
+    }
+    #box2 {
+        background: radial-gradient(circle 60px, red, yellow);
+    }
+    #box3 {
+        background: radial-gradient(circle 60px at 120px 80px, red, yellow);
+    }
+    #box4 {
+        background: radial-gradient(circle 60px at 120px 80px, red, yellow 60%, green);
+    }
+
+    #box5 {
+        background: radial-gradient(circle farthest-corner at 120px 80px, red, yellow);
+    }
+    #box6 {
+        background: radial-gradient(circle farthest-side at 120px 80px, red, yellow);
+    }
+    #box7 {
+        background: radial-gradient(circle closest-corner at 120px 80px, red, yellow);
+    }
+    #box8 {
+        background: radial-gradient(circle closest-side at 120px 80px, red, yellow);
+    }
+
+    #box9 {
+        background: radial-gradient(ellipse at 120px 80px, red, yellow);
+    }
+    #box10 {
+        background: radial-gradient(ellipse 100px 50px, red, yellow);
+    }
+    #box11 {
+        background: radial-gradient(ellipse 100px 50px at 120px 80px, red, yellow);
+    }
+    #box12 {
+        background: radial-gradient(ellipse closest-side at 120px 80px, red, yellow);
+    }
+    
+</style>
+</head>
+<body>
+    <div class="content">
+        <h1>Radial Gradient</h1>
+        <div class="box" id="box1">box</div>
+        <div class="box" id="box2">box</div>
+        <div class="box" id="box3">box</div>
+        <div class="box" id="box4">box</div>
+        <div class="box" id="box5">box</div>
+        <div class="box" id="box6">box</div>
+        <div class="box" id="box7">box</div>
+        <div class="box" id="box8">box</div>
+        <div class="box" id="box9">box</div>
+        <div class="box" id="box10">box</div>
+        <div class="box" id="box11">box</div>
+        <div class="box" id="box12">box</div>
+    </div>
+</body>
+</html>
