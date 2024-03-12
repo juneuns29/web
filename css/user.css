@@ -17,3 +17,23 @@
 .inblock {
     display: inline-block;
 }
+
+.frHidden {
+    overflow: hidden;
+}
+
+.lbl {
+    font-size: 15pt;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.pdh20 {
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+}
+
+.pdh30 {
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+}
