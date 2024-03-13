@@ -72,5 +72,23 @@
 .avtrdo {
     width: 16px;
     height: 16px;
+    position: relative;
+    top: -2px;
+}
+
+.avtimg {
+    width: 78px;
+    height: auto;
+}
+
+.avtBox {
+    width: 80px;
+    height: 100px;
+}
+.imgBox {
+    width: 78px;
+    height: 78px;
+    overflow: hidden;
+    border: 1px solid lightgrey;
 }
 
