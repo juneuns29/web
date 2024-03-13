@@ -26,6 +26,7 @@
     font-size: 15pt;
     font-weight: bold;
     padding-right: 15px;
+    padding-top: 4px;
 }
 
 .pdh20 {
@@ -36,4 +37,18 @@
 .pdh30 {
     padding-top: 30px!important;
     padding-bottom: 30px!important;
+}
+
+.mgt10 {
+    margin-top: 10px;
+}
+.mgt20 {
+    margin-top: 20px;
+}
+
+.btnW1 {
+    width: 100px;
+}
+.btnPd {
+    padding: 5px 16px;
 }
