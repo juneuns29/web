@@ -30,13 +30,51 @@
                             placeholder="아이디를 입력하세요."
                             class="w3-col m9 w3-input w3-border">
                     <div class="w3-button w3-blue w3-right" id="chkBtn">check</div>
+                    <small class="w3-col s9 w3-hide" id="idmsg">* 사용가능한 아이디입니다.</small>
                 </div>
             </div>
             <div class="w3-col w3-padding">
                 <label for="pw" class="w3-col m3 lbl w3-text-gray w3-right-align">비밀번호 : </label>
-                <input type="password" name="pw" id="pw" 
-                        placeholder="비밀번호를 입력하세요."
+                <div class="w3-col m8">
+                    <input type="password" name="pw" id="pw" 
+                            placeholder="비밀번호를 입력하세요."
+                            class="w3-col w3-input w3-border">
+                    <small class="w3-col w3-hide" id="pwmsg"># 형식이 맞지 않습니다.</small>
+                </div>
+            </div>
+            <div class="w3-col w3-padding">
+                <label for="repw" class="w3-col m3 lbl w3-text-gray w3-right-align">비밀번호확인 : </label>
+                <div class="w3-col m8">
+                    <input type="password" id="repw" 
+                            placeholder="비밀번호 확인 입력!"
+                            class="w3-col w3-input w3-border">
+                    <small class="w3-col w3-hide" id="repwmsg"># 비밀번호가 일치하지 않습니다.</small>
+                </div>
+            </div>
+            <div class="w3-col w3-padding">
+                <label for="mail" class="w3-col m3 lbl w3-text-gray w3-right-align">이메일 : </label>
+                <input type="text" name="mail" id="mail" 
+                        placeholder="이메일을 입력하세요."
                         class="w3-col m8 w3-input w3-border">
+            </div>
+            <div class="w3-col w3-padding">
+                <label for="tel" class="w3-col m3 lbl w3-text-gray w3-right-align">전화번호 : </label>
+                <input type="text" name="tel" id="tel" 
+                        placeholder="전화번호를 입력하세요."
+                        class="w3-col m8 w3-input w3-border">
+            </div>
+            <div class="w3-col w3-padding">
+                <label for="id" class="w3-col m3 lbl w3-text-gray w3-right-align">성 별 : </label>
+                <div class="w3-col m8">
+                    <div class="w3-half w3-center">
+                        <input type="radio" name="gen" id="F" class="w3-radio rdo" style="position: relative; top: 10px;">
+                        <label for="F" class="genlbl w3-text-gray">여 자</label>
+                    </div>
+                    <div class="w3-half w3-center">
+                        <input type="radio" name="gen" id="M" class="w3-radio rdo">
+                        <label for="M" class="genlbl w3-text-gray">남 자</label>
+                    </div>
+                </div>
             </div>
         </form>
         <div class="w3-col w3-center w3-padding w3-margin-top">
@@ -45,5 +83,13 @@
             <div class="w3-button inblock w3-blue btnW1 w3-card-4 btnPd" id="join">회원가입</div>
         </div>
     </div>
+<!-- 
+    <script type="text/javascript">
+        document.getElementById('chkBtn').onclick = function(){
+            document.getElementById('idmsg').setAttribute('class', 'w3-col s9 w3-text-red');
+            document.getElementById('idmsg').innerHTML = '# 이미 사용중인 아이디입니다.';
+        };
+    </script>
+-->
 </body>
 </html>
