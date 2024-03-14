@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>자바스크립트 실행 순서</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var num = 0; // num 변수를 만들고 0으로 초기화
+        document.write('<p>head 태그 내 실행 순서 1 : ' + num + '</p>');
+    </script>
+    <script type="text/javascript">
+        var num = 1;
+        document.write('<p>head 태그 내 실행 순서 2 : ' + num + '</p>');
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var num = 2;
+        document.write('<p>head 태그 내 실행 순서 3 : ' + num + '</p>');
+    </script>
+    <script type="text/javascript">
+        var num = 3;
+        document.write('<p>head 태그 내 실행 순서 4 : ' + num + '</p>');
+    </script>
+</body>
+</html>
