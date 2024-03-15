@@ -13,11 +13,10 @@
     ];
 
     document.write('<div class="w3-content mxw650 w3-center">');
-    document.write('<h1 class="w3-padding ' + colorList[0] + ' w3-card-4">' + colorList[0] + '</h1>');
-    document.write('<h1 class="w3-padding ' + colorList[1] + ' w3-card-4">' + colorList[1] + '</h1>');
-    document.write('<h1 class="w3-padding ' + colorList[2] + ' w3-card-4">' + colorList[2] + '</h1>');
-    document.write('<h1 class="w3-padding ' + colorList[3] + ' w3-card-4">' + colorList[3] + '</h1>');
-    document.write('<h1 class="w3-padding ' + colorList[4] + ' w3-card-4">' + colorList[4] + '</h1>');
+    
+    for(var i = 0 ; i < colorList.length ; i++ ){
+        document.write('<h1 class="w3-padding ' + colorList[i] + ' mgh0">' + colorList[i] + '</h1>');
+    }
     document.write('</div>');
 </script>
 </head>

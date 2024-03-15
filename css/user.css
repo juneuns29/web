@@ -38,6 +38,11 @@
     padding-top: 14px;
 }
 
+.pdh10 {
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+}
+
 .pdh20 {
     padding-top: 20px!important;
     padding-bottom: 20px!important;
@@ -53,6 +58,33 @@
 }
 .mgt20 {
     margin-top: 20px;
+}
+
+.mgb0 {
+    margin-bottom: 0px!important;
+}
+
+.mgb10 {
+    margin-bottom: 10px!important;
+}
+
+.mgb20 {
+    margin-bottom: 20px!important;
+}
+
+.mgh0 {
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+}
+
+.mgh10 {
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+}
+
+.mgh20 {
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
 }
 
 .btnW1 {
