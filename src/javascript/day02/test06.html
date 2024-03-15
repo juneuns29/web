@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/user.css">
+    <script type="text/javascript">
+        var num1, num2;
+        
+        function abc(){
+            var no1 = prompt('첫번째 숫자');
+            var no2 = prompt('두번째 숫자');
+            alert('no1 + no2 : ' + (no1 + no2));
+
+            // 입력받은 숫자를 정수로 변환해서 변수에 대입
+            var no3 = parseInt(prompt('세번째 숫자'));
+            var no4 = parseInt(prompt('네번째 숫자'));
+            // 출력
+            alert('no3 + no4 : ' + (no3 + no4));
+        }
+        
+        // abc();
+
+        function setS1(){
+            num1 = parseInt(prompt('num1 입력'));
+            document.getElementById('s1').innerHTML = num1;
+        }
+        function setS2(){
+            num2 = parseInt(prompt('num2 입력'));
+            document.getElementById('s2').innerHTML = num2;
+        }
+    </script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <div class="w3-padding">
+            <h1 class="w3-col m10 w3-pink w3-padding w3-card-4">
+                num1 : <span id="s1"></span>
+            </h1>
+            <div class="w3-button w3-blue" onclick="setS1()">click 1</div>
+        </div>
+        <div class="w3-padding">
+            <h1 class="w3-col m10 w3-purple w3-padding w3-card-4">
+                num2 : <span id="s2"></span>
+            </h1>
+            <div class="w3-button w3-indigo" onclick="setS2()">click 2</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 재선언 후 데이터 타입</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/user.css">
+    <script type="text/javascript">
+        stdName = '제니'; // var 키워드 생략
+        comGrade = 98;
+        var stdName; // 변수 재선언
+        var comGrade;
+        document.write('<div class="w3-content mxw650">');
+        document.write('<h1 class="w3-center w3-padding w3-blue">변수의 재선언 후 데이터 타입</h1>');
+        document.write('<div class="w3-col">');
+        document.write('<h3 class="w3-center">학생이름 : ' + stdName + '</h3>');
+        document.write('<h3 class="w3-center">코딩점수 : ' + comGrade + '</h3>');
+        document.write('</div>');
+        document.write('</div>');
+                
+        function abc(){     
+            var a = 10;
+            alert('no : ' + no);
+            var b = 10;
+            var c = 10;
+            var d = 10;
+            var no = 10;
+            /*
+            ==> 
+                var no;
+                var a = 10;
+                alert('no : ' + no);
+                var b = 10;
+                var c = 10;
+                var d = 10;
+                no = 10;
+            */
+        }
+
+        abc();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

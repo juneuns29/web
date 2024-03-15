@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/user.css">
+    <script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+        var globValue1;
+        // globValue2;
+        
+        var name1;
+        alert(typeof name1);
+        function test01(){
+            alert(name1);
+            var locValue;   // 지역 변수 - 함수 내에서 var 라는 키워드로 변수를 만들면 그 변수는 지역변수가 된다.
+            globValue = 999; // 전역 변수 - var 키워드 없이 변수에 데이터를 대입하면 그 변수는 전역변수가 된다.
+            locValue = 10;
+            var name1 = '제니';
+            /*
+                ==> 위 코드는 자바스크립트 엔진이 아래처럼 해석을 한다.
+
+                    var name1;
+                    alert(name1);
+                    var locValue;
+                    globValue = 999;
+                    locValue = 10;
+                    name1 = '제니';
+
+                위와 같이 함수내에서 
+                코드의 아랫부분에 만들어지는 지역변수는
+                그 변수의 선언부가 함수의 최상단으로
+                끌어올려져시 해석이 되고 실행한다.
+                이것을 "변수 호이스팅"이라고 한다.
+            */
+        }
+    </script>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        test01();
+        document.write('<div class="w3-content w3-center">');
+        document.write('<h1 class="w3-pink w3-padding w3-card-4">globValue : ' + 
+                                                                globValue + '</h1>');
+        document.write('<h1 class="w3-piurple w3-padding w3-card-4">name : ' + 
+                                                                    name1 + '</h1>');
+        alert('name : ' + typeof name1);
+        document.write('<h1 class="w3-piurple w3-padding w3-card-4">locValue : ' + 
+                                                                    locValue + '</h1>');
+        document.write('</div>');
+    </script>
+</body>
+</html>

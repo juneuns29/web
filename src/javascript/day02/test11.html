@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>변수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    var name = prompt('이름입력');
+    var age = prompt('나이입력');
+    var result1 = '제니입니다.';
+    var result2 = '스물여덟입니다.';
+
+    var borderColor = 'w3-border-pink w3-yellow w3-text-purple';
+
+    if(name != '제니'){
+        result1 = '제니가 아닙니다.';
+        borderColor = 'w3-border-blue w3-lime w3-text-indigo';
+    }
+    if(age != 28){
+        result2 = '스물여덟이 아닙니다.';
+    }
+
+    document.write('<div class="w3-content mxw650">');
+    document.write('<h1 class="w3-border '+ borderColor +
+                    ' w3-padding">입력한 사람의 이름은 ' + result1 + '</h1>');
+    document.write('<h1 class="w3-border ' + borderColor + 
+                    ' w3-padding">입력한 사람의 나이는 ' + result2 + '</h1>');
+    document.write('</div>')
+</script>
+</head>
+<body>
+
+</body>
+</html>

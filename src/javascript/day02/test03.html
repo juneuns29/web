@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var myvar = 'myValue';
+        (function(){
+            console.log(myvar);
+            var myvar = 'local value'; // 지역변수. 변수 호이스팅이 일어난다.
+            /*
+                ==>
+                var myvar;  //  변수 선언
+                console.log(myvar); // 콘솔에 출력
+                myvar = 'local value';  // 변수 초기화
+
+                이렇게 실행하게 된다.
+            */
+        })();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

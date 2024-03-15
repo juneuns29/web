@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/user.css">
+    <script type="text/javascript">
+        var kor = 100;
+        var eng = 95;
+
+        /*
+            참고 ]
+
+                변수 만드는 형식 ]
+                    1.
+                    var 변수이름;
+                    변수이름 = 데이터;
+
+                    2. 
+                    변수이름 = 데이터;
+
+                함수 만드는 형식 ]
+
+                    function 함수이름(매개변수리스트){
+                        함수내용...
+                    }
+
+                    주의 ]
+                        자바스크립트에서는 함수의 형식에 
+                        반환값의 형태가 포함되지 않는다.
+                        따라서 같은 함수가 여러타입의 데이터를 반환해줄 수 있다.
+        */
+
+        function setScore(){
+            var kor = 80;   // 지역변수
+            eng = 100;      // 전역변수
+            name = '제니';  // 전역변수
+        }
+
+        setScore();
+        alert('이름 : ' + name + '\n국어 : ' + kor + '\n영어 : ' + eng);
+        console.log('이름 : ' + name);
+        console.log('국어 : ' + kor);
+        console.log('영어 : ' + eng);
+
+        /*
+            자바스크립트의 실행내용 확인하는 방법
+
+                1. alert()
+
+                2. document.write();
+
+                3. console.log();
+
+                4. 태그 선택해서 입력하는 방법
+                    innerHTML
+                    innerText
+                    textContent
+        */
+
+    </script>
+</head>
+<body>
+    <div class="w3-content mxw650" id="fr">
+        <h1 class="w3-pink w3-padding w3-center w3-card-4" id="t1"></h1>
+        <h1 class="w3-purple w3-padding w3-center w3-card-4" id="t2"></h1>
+        <h1 class="w3-indigo w3-padding w3-center w3-card-4" id="t3"></h1>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('t1').innerHTML = '이름 : ' + name;
+        document.getElementById('t2').innerText = '국어 : ' + kor;
+        document.getElementById('t3').textContent = '영어 : ' + eng;
+    </script>
+</body>
+</html>
