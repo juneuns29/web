@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>변수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    var black = ['제니', '리사'];
+    var pink = ['로제', '지수'];
+
+    var joinBlack = black.join('///'); // 기본값은 ',' 로 이어 붙여준다.
+    document.write(joinBlack + ' : ' + ((joinBlack instanceof String) ? '문자열':'문자열아님'));
+    // alert(joinBlack + ' : ' + typeof joinBlack);
+
+    var result = black.concat(pink);
+    result = result.concat('쵸파', '루피', black, pink);
+    for(var i = 0 ; i < result.length ; i++ ){
+        document.write('<div class="inblock ' + colorList[i] + 
+                            '" style="width: 100px; height: 30px;">' + result[i] + '</div>');
+    }
+    document.write('<hr>');
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
