@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Switch - Case</title>
+<meta charset="UTF-8">
+<script type="text/javascript">
+    var score = prompt('점수입력');
+    var ngrade = parseInt(score/10);
+    switch(ngrade){
+        case 10:
+            document.write('<h1>입력점수 : ' + score + ", 학점 : A-만점자</h1>");
+            break;
+        case 9:
+            document.write('<h1>입력점수 : ' + score + ', 학점 : A</h1>');
+            break;
+        case 8:
+            document.write('<h1>입력점수 : ' + score + ', 학점 : B</h1>');
+            break;
+        case 7:
+            document.write('<h1>입력점수 : ' + score + ', 학점 : C</h1>');
+            break;
+        case 6:
+            document.write('<h1>입력점수 : ' + score + ', 학점 : D</h1>');
+            break;
+        default:
+            document.write('<h1>입력점수 : ' + score + ', 학점 : F</h1>');
+    }
+</script>
+</head>
+<body>
+
+</body>
+</html>

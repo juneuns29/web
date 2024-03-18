@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>변수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    var city = []; // 비어있는 배열 만들고...
+
+    city[0] = '영등포';
+    city[1] = '일산';
+    city[2] = '대야미';
+    city[3] = '수원';
+    city[4] = '안양';
+    city[5] = '신림동';
+
+    var i;
+    for(i = 0 ; i < city.length ; i++ ){
+        document.write('<h2 class="' + colorList[i] + 
+                            ' w3-padding w3-center">' + city[i] + '</h2>');
+    }
+</script>
+</head>
+<body>
+
+</body>
+</html>

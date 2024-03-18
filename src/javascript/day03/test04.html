@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>함수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    var result;
+    // alert(result);
+    
+    function add(name, n){
+        document.write('<h1>' + name + ' 학생이 1부터 ' + n + ' 까지 더하기를 합니다.</h1>');
+        var sum = 0;
+        for(var i = 1; i <= n ; i++ ){
+            // sum = sum + i;
+            sum += i;
+        }
+
+        return sum;
+    }
+
+    result = add('제니', 4);
+    document.write('<h3>제니의 작업 결과 : ' + result + '</h3>');
+
+    result = add(300, 5);
+    document.write('<h3>300의 작업 결과 : ' + result + '</h3>');
+</script>
+</head>
+<body>
+
+</body>
+</html>
