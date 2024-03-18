@@ -44,6 +44,7 @@
         ['지수', 29, 'jisoo', '010-2929-2929']
     ];
 
+    var menu = ['이름', '나이', '아이디', 'Tel'];
     // forEach 함수를 이용해서 위 배열을 아래 태그의 형식으로 표현하세요.
     function setTag(data){
         var str = '<div class="inblock w3-card-4 w3-padding w3-margin" style="width: 280px;">';
@@ -68,7 +69,25 @@
         document.getElementById('fr').innerHTML += str;
     }
     
-    member.forEach(setTag);
+    // member.forEach(setTag);
+
+
+    // forEach 함수를 이용해서 위 배열을 아래 태그의 형식으로 표현하세요.
+    function setData(data){
+        var str = '<div class="inblock w3-card-4 w3-padding w3-margin" style="width: 280px;">';
+        for(var i = 0 ; i < data.length;i++){
+            str += '        <div class="w3-col">';
+            str += '            <h6 class="w3-col m5 w3-right-align pdr10">'+ menu[i] +' : </h6>';
+            str += '            <h6 class="w3-col m6">' + data[i] + '</h6>';
+            str += '        </div>';
+
+        }
+        str += '</div>';
+
+        document.getElementById('fr').innerHTML += str;
+    }
+
+    member.forEach(setData);
 </script>
 </body>
 </html>
