@@ -22,6 +22,19 @@
     }
     document.write('<hr>');
 
+    colorList.reverse();
+    result = result.reverse();
+    for(var i = 0 ; i < result.length ; i++ ){
+        document.write('<div class="inblock ' + colorList[i] + 
+                            '" style="width: 100px; height: 30px;">' + result[i] + '</div>');
+    }
+    document.write('<hr>');
+    document.write('<h3>sort()</h3>');
+    result = result.sort(); // 배열 자체를 오름차순 정렬해서 고치고 수정된 배열을 반환해준다.
+    for(var i = 0 ; i < result.length ; i++ ){
+        document.write('<div class="inblock ' + colorList[i] + 
+                            '" style="width: 100px; height: 30px;">' + result[i] + '</div>');
+    }
 </script>
 </head>
 <body>

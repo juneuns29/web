@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>변수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    var kdata = ['서울', '부산'];
+    var p1 = kdata.unshift('청주', '세종');
+    document.write('<h2 class="w3-center ' + colorList[0] +'">p1 : ' + p1 + '</h2>');
+    document.write('<h2 class="w3-center ' + colorList[1] +'">kdata : ' + kdata + '</h2>');
+    var p2 = kdata.shift();
+    document.write('<h2 class="w3-center ' + colorList[2] +'">p2 : ' + p2 + '</h2>');
+    document.write('<h2 class="w3-center ' + colorList[3] +'">kdata : ' + kdata + '</h2>');
+    
+    function abc(a){
+        document.write('<h2 class="w3-center ' + colorList[7] +'">입력된 배열 : ' + a + '</h2>');
+    }
+
+    var xyz = abc; // 자바스크립트에서는 함수 자체도 변수에 대입할 수 있다.
+
+    xyz(kdata);
+</script>
+</head>
+<body>
+
+</body>
+</html>
