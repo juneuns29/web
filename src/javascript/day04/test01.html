@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>변수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    var data = [28, 26, 27, 29]; // 블랙핑크 나이..
+    var sum = 0; // 합계 기억할 변수
+    // 멤버의 나이를 누적시켜주는 함수
+    function addSum(age){
+        sum += age;
+    }
+
+    data.forEach(addSum);
+
+    document.write('<div class="w3-content mxw650 w3-center">');
+    document.write('    <h1 class="w3-pink w3-padding w3-card-4">BlackPink 나이 합계 : ' + sum + '</h1>');
+    document.write('</div>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

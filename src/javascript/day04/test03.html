@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>변수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    // 0 ~ n 까지의 합을 반환해주는 함수를 제작하세요.
+    function getSum(n){
+        // forEach를 이용해서 처리하는 방법
+        var arr = [];
+        var sum = 0;
+        for(var i = 0 ; i <= n ; i++ ){
+            arr[i] = i;
+        }
+
+        /*
+        
+        // 1. 
+        function abc(no){
+            sum += no;
+        }
+        // 2.
+        var abc = function(no){
+            sum += no;
+        };
+
+        arr.forEach(abc);
+
+        */
+        arr.forEach(function(no){// 무명함수
+            sum += no;
+        });
+
+        // 함수 만드는 형식
+        /*
+            function 함수이름(매개변수...){
+                함수내용...
+
+                [ return [ 데이터 ] ; ]
+            }
+        */
+
+        // 무명함수를 이용해서 함수를 제작하는 방법
+        /*
+            var 함수이름 = function(매개변수...){
+                함수내용
+            };
+        */
+
+        return sum;
+    }
+
+    // 1 ~ n 까지의 곱을 반환해주는 함수를 제작하세요.
+    function getGop(n){
+        var arr = [];
+        for(var i = 0; i < n ; i++ ){
+            arr[i] = i + 1;
+        }
+        // 반환값 변수
+        var gop = 1;
+        arr.forEach(function(no){
+            gop *= no;
+        });
+
+        return gop;
+    }
+
+    // alert('1~5까지 곱 : ' + getGop(5));
+    alert('0 ~ 10까지 합 : ' + getSum(10));
+</script>
+<script type="text/javascript">
+    // 반복문을 이용해서 처리하는 방법
+    function getSum(n){
+        var sum = 0;
+        for(var i = 0 ; i < n + 1; i++ ){
+            sum += i;
+        }
+
+        return sum;
+    }
+
+    function getGop(n){
+        var gop = 1;
+        for(var i = 1; i <= n ; i++ ){
+            gop *= i;
+        }
+        return gop;
+    }
+</script>
+</head>
+<body>
+
+</body>
+</html>
