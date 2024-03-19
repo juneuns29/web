@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    var jennie = {
+        '이름': '김제니',
+        '나이': 28,
+        '메일': 'jennie@human.com',
+        '전화': '010-1212-1212'
+    };
+
+    document.write('<div class="w3-content mxw650 w3-center">');
+    document.write('    <h1 class="w3-deep-purple w3-padding w3-card-4">Jennie</h1>');
+    document.write('    <h6 class="w3-pink w3-padding w3-card-4">이름 : ' + jennie['이름'] + '</h6>');
+    document.write('    <h6 class="w3-pink w3-padding w3-card-4">나이 : ' + jennie['나이'] + '</h6>');
+    document.write('    <h6 class="w3-pink w3-padding w3-card-4">메일 : ' + jennie['메일'] + '</h6>');
+    document.write('    <h6 class="w3-pink w3-padding w3-card-4">전화 : ' + jennie['전화'] + '</h6>');
+    document.write('</div>');
+    document.write('<hr>');
+
+    var blackPink = [
+        {
+            '이름': '김제니',
+            '나이': 28,
+            '메일': 'jennie@human.com',
+            '전화': '010-1212-1212'
+        },
+        {
+            '이름': '리사',
+            '나이': 26,
+            '메일': 'lisa@human.com',
+            '전화': '010-2424-2424'
+        },
+        {
+            '이름': '로제',
+            '나이': 27,
+            '메일': 'rose@human.com',
+            '전화': '010-5454-5454'
+        },
+        {
+            '이름': '지수',
+            '나이': 29,
+            '메일': 'jisoo@human.com',
+            '전화': '010-2626-2626'
+        }
+    ];
+
+
+    document.write('<div class="w3-content mxw650">');
+    document.write('    <h1 class="w3-deep-purple w3-padding w3-card-4 w3-center">BlackPink</h1>');
+    document.write('    <div class="w3-col w3-padding w3-center">');
+    
+    // 한명 데이터
+    for(var i = 0 ; i < blackPink.length ; i++ ){
+        document.write('        <div class="inblock w3-padding w3-card-4" style="width: 280px;">');
+        document.write('            <div class="w3-col w3-pink">');
+        document.write('                <h6 class="w3-col">' + blackPink[i].이름 + '</h6>');
+        document.write('            </div>');
+        document.write('            <div class="w3-col">');
+        document.write('                <h6 class="w3-col m4 w3-right-align pdr10">나이 : </h6>');
+        document.write('                <h6 class="w3-col m7">' + blackPink[i]['나이'] + '</h6>');
+        document.write('            </div>');
+        document.write('            <div class="w3-col">');
+        document.write('                <h6 class="w3-col m4 w3-right-align pdr10">메일 : </h6>');
+        document.write('                <h6 class="w3-col m7">' + blackPink[i]['메일'] + '</h6>');
+        document.write('            </div>');
+        document.write('            <div class="w3-col">');
+        document.write('                <h6 class="w3-col m4 w3-right-align pdr10">전화 : </h6>');
+        document.write('                <h6 class="w3-col m7">' + blackPink[i].전화 + '</h6>');
+        document.write('            </div>');
+        document.write('        </div>');
+    }
+
+    document.write('    </div>');
+    document.write('</div>');
+
+
+
+
+    /*
+    function func1(){}
+    var func1 = function(){};
+    */
+</script>
+</head>
+<body>
+    
+</body>
+</html>

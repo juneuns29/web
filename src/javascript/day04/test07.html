@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    // 비어있는 배열 만들기
+    // var data = [];
+    var data = new Array();
+    // 데이터 채우기
+    for(var i = 0 ; i < 10 ; i++ ){
+        data[i] = [String(i + '-' + 0), String(i + '-' + 1), String(i + '-'+2)];
+    }
+
+    // document.write(data[0]);
+    
+    function printData(){
+        for(var x = 0 ; x < data.length ; x++){
+            document.write('<h6>');
+            for(var y = 0 ; y < data[x].length; y++ ){
+                document.write(data[x][y] + ' ');
+            }
+            document.write('</h6>');
+        }
+
+        document.write('<a href="test07.html">돌아가기</a>');
+    }
+    
+    function getTxt(a){
+        var txt = a.innerHTML;
+        a.setAttribute('class', 'w3-pink w3-padding');
+        // 이때 this의 의미는 이함수 getTxt()를 호출하는 객체를 의미한다.
+        alert(txt);
+    }
+
+    function reCol(a){
+        a.setAttribute('class', 'w3-blue w3-padding');
+    }
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <h1 class="w3-blue w3-padding" 
+                onmouseover="getTxt(this)" onmouseout="reCol(this)">2차원 배열 만들기</h1>
+        <button class="w3-col w3-button w3-blue w3-hover-aqua" 
+                onclick="getTxt(this); printData();">전체 배열 데이터 보기</button>
+    </div>
+</body>
+</html>

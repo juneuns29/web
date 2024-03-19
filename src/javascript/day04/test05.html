@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>filter()</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    var arr = [];
+    // arr에 1 ~ 20 까지 채워보자.
+    for(var i = 0 ; i < 20 ; i++ ){
+        arr[i] = i + 1;
+    }
+
+    // 위배열에서 짝수인 데이터만 꺼내서 새로운 배열을 만드세요.
+    function jjak(no){
+        var result = no % 2 == 0;
+        return result;
+    }
+
+    var nums = arr.filter(jjak);
+    /*
+        ==> jjak 함수의 매개변수에 데이터를 한개씩 입력해서
+            jjak함수의 반환값이 true 인 원소들로만 구성된 
+            배열을 반환해주는 기능
+    */
+    document.write('<div class="w3-content mxw650 w3-center">');
+    document.write('    <h1 class="w3-blue w3-padding w3-card-4">' + arr + '</h1>');
+    document.write('    <h1 class="w3-deep-purple w3-padding w3-card-4">' + nums + '</h1>');
+    document.write('</div>');
+
+    var nos = [10, 20, 30, 40, 30, 60, 70, 30, 90,100];
+    alert(nos.indexOf(30, 3)); // indexOf(데이터, 위치값) : 위치값 이후에 처음 나타나는 데이터의 위치값 반환
+</script>
+</head>
+<body>
+
+</body>
+</html>

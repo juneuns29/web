@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>변수</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    var data = [];
+    // data에 1 ~ 10 까지 채워보자.
+    for(var i = 0 ; i < 10 ; i++ ){
+        data[i] = i + 1;
+    }
+    // alert(data);
+
+    // 위 배열의 각 원소들의 제곱으로 이루어진 배열을 만드세요.
+    
+    // 숫자 하나를 입력받아서 제곱을 만들어서 반환해주는 함수
+    function jegop(no){
+        return no * no;
+    }
+
+    var jegops = data.map(jegop);
+    document.write('<div class="w3-content mxw650 w3-center">');
+    document.write('    <h1 class="w3-blue w3-padding w3-card-4">배열 : 제곱</h1>');
+    
+    /*
+    for(var i = 0 ; i < data.length; i++ ){
+        document.write('    <h1 class="' + colorList[i] + 
+                        ' w3-padding w3-card-4">'+ data[i] +' : ' + jegops[i] + '</h1>');
+    }
+    */
+    data.forEach(function(no, i){
+        var pno = jegops[i];
+        var cClass = colorList[i];
+        document.write('    <h3 class="' + cClass + ' w3-padding w3-card-4">' + 
+                                                        no +' : ' + pno + '</h3>');
+    });
+
+    document.write('</div>');
+</script>
+</head>
+<body>
+
+</body>
+</html>
