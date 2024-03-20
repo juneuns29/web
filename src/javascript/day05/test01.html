@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    function func1(){
+        document.getElementById('rbtn').onclick = function(){
+            /*
+            document.frm.id.value = '';
+            document.frm.pw.value = '';
+            */
+            document.frm.reset();
+            document.getElementById('msg').innerHTML = '';
+            document.getElementById('msg').removeAttribute('class');
+        };
+    };
+</script>
+</head>
+<body onload="func1()">
+    <form class="w3-content w3-center mxw700" name="frm" id="frm">
+        <h1 class="w3-pink w3-padding w3-round-large w3-card-4">Login</h1>
+        <div class="w3-container w3-padding w3-margin-top w3-round-large w3-card-4 pdh30">
+            <div class="w3-col w3-padding">
+                <label for="id" class="w3-col m3 w3-right-align w3-text-gray lbl">ID : </label>
+                <input type="text" class="w3-col m7 w3-input w3-border"
+                        name="id" id="id" placeholder="아이디를 입력하세요." >
+            </div>
+            <div class="w3-col w3-padding">
+                <label for="pw" class="w3-col m3 w3-right-align w3-text-gray lbl">PW : </label>
+                <input type="password" class="w3-col m7 w3-input w3-border"
+                    name="pw" id="pw" placeholder="비밀번호를 입력하세요.">
+                <div class="w3-col">
+                    <p id="msg"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-col w3-margin-top w3-card-4 w3-round-large frHidden">
+            <div class="w3-half w3-button w3-orange w3-hover-yellow" id="rbtn">초기화</div>
+            <div class="w3-col s6 w3-button w3-green w3-hover-lime" id="lbtn">로그인</div>
+        </div>
+    </form>
+<script type="text/javascript">
+    /*
+    document.getElementById('pw').onchange = function(){
+        // 입력태그의 입력된 내용 읽어내는 방법 : value 속성으로 읽는다.
+        // 입력된 내용을 한글자 입력될때마다 체크하는 기능은 change 이벤트로 처리하지 않는다.
+        var val = this.value;
+        alert(val);
+    };
+    */
+
+    document.getElementById('pw').onkeyup = function(){
+        // 할일
+        // 입려된 내용 읽고
+        // 체크하고 ( == 12345 인지 ... )
+        var val = this.value;
+        // val = parseInt(val);
+        if(val == 12345){
+            document.getElementById('msg').setAttribute('class', 'w3-text-blue');
+            document.getElementById('msg').innerHTML = '* 비밀번호가 일치합니다.';
+        } else {
+            document.getElementById('msg').setAttribute('class', 'w3-text-red');
+            document.getElementById('msg').innerHTML = '### 비밀번호가 일치하지 않습니다. ###';
+        }
+    };
+
+    /*
+    document.getElementById('id').onkeydown = function(){
+        // keydown 이벤트는 키보드의 키가 눌려지는 순간의 해당 문자는 
+        // 아직 입력태그에 입력이 되어있지 않은 상태이므로
+        // 읽어오지 못한다.
+        var txt = this.value;
+        alert(txt);
+    };
+
+    document.getElementById('id').onkeypress = function(){
+        var txt = this.value;
+        alert(txt);
+    };
+    */
+</script>
+</body>
+</html>
