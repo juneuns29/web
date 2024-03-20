@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="../../../css/user.css">
 <script type="text/javascript">
     var txt = location.href;
+    var data = location.search.substring(1);
+    alert(data.indexOf('&'));
     document.write('<h4 class="w3-center">href : ' + txt + '</h4>');
     document.write('<h4 class="w3-center">host : ' + location.host + '</h4>');
     document.write('<h4 class="w3-center">hostname : ' + location.hostname + '</h4>');
