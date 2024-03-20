@@ -42,43 +42,123 @@
 
             return s;
         }
-        /*
+        
         // 1. 반복문으로 처리하는 방법
 
-        while(tmp.indexOf('&') != -1){
-            var idx1 = tmp.indexOf('&');
-            var pre = tmp.substring(0, idx1);
+        var temp = tmp;
+        var arr = [];
+        var i = 0;
+        while(true){
+            if(temp.indexOf('&') != -1){
+                var idx = temp.indexOf('&');
+                var txt = temp.substring(0, idx);
+                arr[i++] = txt;
+                temp = temp.substring(idx + 1);
+            } else {
+                var txt = temp;
+                arr[i++] = txt;
+                break;
+            }
+        }
 
+        // alert(arr);
+        /*
+            id=jennie
+            pw=12345
+            team=blackPink
+            mail=jennie@human.com
+            tel=010-1212-1212
+
+            '=' 를 기준으로 문자열을 분리해서 배열에 담아서 채워준다.
+
+        */
+        /*
+        for(var i = 0 ; i < arr.length ; i++ ){
+            var d = arr[i];
+            var j = d.indexOf('=');
+            var k = d.substring(0, j);
+            var v = d.substring(j + 1);
+
+            arr[i] = [k, v];
+        }
+
+        for(var i = 0 ; i < arr.length ; i++ ){
+            document.write('<h5 class="w3-half w3-center">' + arr[i][0] + '</h5>');
+            document.write('<h5 class="w3-half w3-center">' + arr[i][1] + '</h5>');
+        }
+        */
+
+        // 연관배열
+        var darr = {};
+        var keys = [];
+        for(var i  = 0; i < arr.length ; i++ ){
+            // 'id=jennie' ==> 'id', 'jennie'
+            var str = arr[i];
+            var indx = str.indexOf('=');
+            var k = str.substring(0, indx);
+            var v = str.substring(indx + 1);
+            keys[i] = k;
+            darr[k] = v;
+        }
+
+        for(var i = 0 ; i < keys.length ; i++ ){
+            document.write('<h5 class="w3-half w3-center">' + keys[i] + '</h5>');
+            document.write('<h5 class="w3-half w3-center">' + darr[keys[i]] + '</h5>');
+        }
+
+        /*
+        var tag = '';
+        while(tmp.indexOf('&') != -1){
+            var idx = tmp.indexOf('&');
+            var key = tmp.substring(0, tmp.indexOf('='));
+            var value = tmp.substring(tmp.indexOf('=') + 1, tmp.indexOf('&'));
+            tag += getTag(key, value);
+            tmp = tmp.substring(tmp.indexOf('&') + 1);
+        }
+
+        var key = tmp.substring(0, tmp.indexOf('='));
+        var value = tmp.substring(tmp.indexOf('=') + 1);
+        tag += getTag(key, value);
+
+        document.getElementById('fr').innerHTML += tag;
+        */
+        /*
+        while(tmp.indexOf('=') != -1){
+            var idx1 = 0;
+            var pre = tmp;
+            if(tmp.indexOf('&') != -1){
+                idx1 = tmp.indexOf('&');
+                pre = tmp.substring(0, idx1);
+                tmp = tmp.substring(idx1 + 1);
+            }
+            
             var idx2 = pre.indexOf('=');
             var key = pre.substring(0, idx2);
             var value = pre.substring(idx2 + 1);
 
             var tag = getTag(key, value);
             
-            tmp = tmp.substring(idx1 + 1);
-            if(tmp.indexOf('&') == -1){
-                idx2 = tmp.indexOf('=');
-                key = tmp.substring(0, idx2);
-                value = tmp.substring(idx2 + 1);
-
-                tag += getTag(key, value);
-            }
             document.getElementById('fr').innerHTML += tag;
         }
         */
 
+        /*
         // 2. split()를 이용해서 처리하는 방법
         var arr = data.split('&');
         var tag = '';
         for(var i = 0 ; i < arr.length ; i++ ){
-            var idx = arr[i].indexOf('=');
-            var key = arr[i].substring(0, idx);
-            var value = arr[i].substring(idx + 1);
+            tag += getTag(arr[i].substring(0, arr[i].indexOf('=')), 
+                            arr[i].substring(arr[i].indexOf('=') + 1));
+            
+            // var idx = arr[i].indexOf('=');
+            // var key = arr[i].substring(0, idx);
+            // var value = arr[i].substring(idx + 1);
 
-            tag += getTag(key, value);
+            // tag += getTag(key, value);
         }
 
         document.getElementById('fr').innerHTML = tag;
+        */
     </script>
 </body>
 </html>
