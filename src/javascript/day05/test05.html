@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    var jennie = {
+        name : '김제니',
+        age : 28,
+        mail: 'jennie@human.com',
+        tel: '010-1212-1212',
+        sing: function(){
+            document.write('<p>Hey, boy</p>');
+            document.write("<p>Make 'em whistle like a missile bomb, bomb</p>");
+            document.write('<p>Every time I show up, blow up, uh</p>');
+        }
+    }
+
+    var jisoo = new Object();
+    jisoo.name = '지수';
+    jisoo.age = 29;
+    jisoo['mail'] = 'jisoo@human.com';
+    jisoo['tel'] = '010-2929-2929';
+    jisoo.sing = function(){
+        document.write('<div class="w3-content mxw600 w3-center">');
+        document.write('<h1 class="w3-purple w3-card-4">꽃 <small>- 지수 -</small></h1>');
+        document.write('<div class="w3-col w3-card-4">');
+        document.write('<p>Eh-eh-eh-eh</p>');
+        document.write('<p>Eh-eh-eh-eh</p>');
+        document.write("<p>A-B-C, Do-Re-Mi 만큼 착했던 나</p>");
+        document.write('<p>그 눈빛이 싹 변했지</p>');
+        document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/YudHcBIxlYw?si=a-Dl_EuJaFfQmQgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+        document.write('</div>');
+        document.write('</div>');
+    };
+
+    document.write('<h1 class="w3-pink w3-center w3-padding w3-card-4">' + 
+                                                        jennie.name + '</h1>');
+    document.write('<h1 class="w3-pink w3-center w3-padding w3-card-4">나이 : ' + 
+                                                        jennie['age'] + '</h1>');
+    document.write('<h1 class="w3-pink w3-center w3-padding w3-card-4">메일 : ' + 
+                                                        jennie['mail'] + '</h1>');
+    document.write('<h1 class="w3-pink w3-center w3-padding w3-card-4">전화 : ' + 
+                                                        jennie.tel + '</h1>');
+    document.write('<h1 class="w3-pink w3-center w3-padding w3-card-4">공연 : </h1>');
+    jennie.sing();
+
+    jisoo.sing();
+</script>
+</head>
+<body>
+
+</body>
+</html>
