@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    
+</script>
+</head>
+<body>
+    <form class="w3-content w3-center mxw700">
+        <h1 class="w3-pink w3-padding w3-round-large w3-card-4">정규표현식 검사</h1>
+        <div class="w3-container w3-padding w3-margin-top w3-round-large w3-card-4 pdh30">
+            <div class="w3-col w3-padding">
+                <label for="msg" class="w3-col m3 w3-right-align w3-text-gray lbl">문자열 입력 : </label>
+                <input type="text" class="w3-col m7 w3-input w3-border"
+                        name="msg" id="msg" placeholder="문자열을 입력하세요.">
+            </div>
+        </div>
+
+        <div class="w3-col w3-margin-top w3-card-4 w3-round-large frHidden">
+            <div class="w3-third w3-button w3-green w3-hover-lime" id="jcheck">jennie검사</div>
+            <div class="w3-third w3-button w3-blue w3-hover-lime" id="tcheck">전화번호검사</div>
+            <div class="w3-third w3-button w3-deep-purple w3-hover-lime" id="check">검사</div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        // 검사 버튼 클릭 이벤트
+        document.getElementById('jcheck').onclick = function(){
+            // 할일
+            // 1. 입력된 내용 읽고
+            var msg = document.getElementById('msg').value;
+            // 데이터 유효성 검사
+            if(!msg){
+                // 입력내용이 없는 경우
+                // 메세지 출력
+                alert('입력 내용이 없습니다. 입력하고 시도하세요.');
+                // 입력태그로 포커스 이동
+                document.getElementById('msg').focus();
+                // 실행중인 이 함수의 실행을 즉시 종료
+                return;
+            }
+            // 2. 정규표현객체 만들고
+            var reg1 = new RegExp('jennie');
+            var reg2 = /^jennie$/;
+            // 3. 표현식 맞는지 검사하고
+            var result1 = reg1.test(msg);
+            var result2 = reg2.test(msg);
+            // 4. 검사 결과 메세지창 띄우고 
+            var str = '규칙에 맞지 않게 입력했습니다.';
+            if(result2){
+                str = '규칙에 맞게 입력했습니다.';
+            }
+
+            // alert(result1 ? '규칙에 맞게 입력했습니다.':'규칙에 맞지 않게 입력했습니다.');
+            alert(str);
+        };
+
+        document.getElementById('tcheck').onclick = function(){
+            // 입력데이터 읽어오고
+            var hp = document.getElementById('msg').value;
+            if(!hp){
+                document.getElementById('msg').focus();
+                alert('전화번호를 입력하세요.');
+                return;
+            }
+            // 정규표현객체 만들고
+            var regT = /^0[0-9]{1,2}-[0-9]{4}-[0-9]{4}$/;
+            // 검사하고
+            var result = 
+            // 결과 출력하고
+
+        };
+    </script>
+</body>
+</html>
