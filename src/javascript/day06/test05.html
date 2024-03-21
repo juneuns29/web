@@ -10,7 +10,7 @@
 </script>
 </head>
 <body>
-    <form class="w3-content w3-center mxw700">
+    <form class="w3-content w3-center mxw700" name="frm">
         <h1 class="w3-pink w3-padding w3-round-large w3-card-4">정규표현식 검사</h1>
         <div class="w3-container w3-padding w3-margin-top w3-round-large w3-card-4 pdh30">
             <div class="w3-col w3-padding">
@@ -21,9 +21,10 @@
         </div>
 
         <div class="w3-col w3-margin-top w3-card-4 w3-round-large frHidden">
-            <div class="w3-third w3-button w3-green w3-hover-lime" id="btn1">타이틀 배경색 변경</div>
-            <div class="w3-third w3-button w3-blue w3-hover-lime" id="btn2">라벨 폰트 크기 변경</div>
-            <div class="w3-third w3-button w3-deep-purple w3-hover-lime" id="btn3">none</div>
+            <div class="w3-quarter w3-button w3-green w3-hover-lime" id="btn1">타이틀 배경색 변경</div>
+            <div class="w3-quarter w3-button w3-blue w3-hover-lime" id="btn2">라벨 폰트 크기 변경</div>
+            <div class="w3-quarter w3-button w3-deep-purple w3-hover-lime" id="btn3">none</div>
+            <div class="w3-quarter w3-button w3-purple w3-hover-pink" id="btn4">입력값 읽기</div>
         </div>
     </form>
 
@@ -32,15 +33,36 @@
             var ele = document.getElementsByTagName('h1')[0];
             ele.setAttribute('class', 'w3-padding w3-round-large w3-card-4');
             // ele.style.backgroundColor = 'orange';
-            ele.style = 'background-color: orange; height: 150px; border: 25px dotted pink; line-height: 200%; font-weight: bold; font-size: 32pt; color: white;';
+            ele.style = 'background-color: orange; height: 150px; ' + 
+                        'border: 25px dotted pink; line-height: 200%; ' + 
+                        'font-weight: bold; font-size: 32pt; color: white;';
         };
         document.getElementById('btn2').onclick = function(){
             document.getElementsByClassName('lbl')[0].style.fontSize = '17pt';
             document.getElementsByClassName('lbl')[0].style.lineHeight = '130%';
         };
         document.getElementById('btn3').onclick = function(){
-            document.querySelectorAll('form > div:nth-child(2)')[0].style.display = 'none';
+            var ele = document.querySelectorAll('form > div:nth-child(2)')[0];
+            ele.style.display = 'none';
+            document.frm.innerHTML += '<img src="../../html/img/chopper.jpg" '+
+                                            'width="300" height="auto" id="img1">';
+
+            alert(document.getElementById('img1').src);
+
+            document.getElementById('img1').src = '../../html/img/chopper02.jpg';
         };
+
+        // bnt4 클릭이벤트
+        document.getElementById('btn4').onclick = function(){
+            var reg1 = /^.*회원 입장!!!$/;
+            var txt = document.frm.msg.value;
+            if(!reg1.test(txt)){
+                document.getElementsByTagName('h1')[0].innerHTML = txt;
+    
+                document.frm.msg.value += ' 회원 입장!!!';
+                document.frm.msg.setAttribute('disabled', true);
+            }
+        }
     </script>
 </body>
 </html>
