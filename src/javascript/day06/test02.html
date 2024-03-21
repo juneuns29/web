@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    
+    var date = new Date();
+    var y = date.getFullYear();
+    var mon = date.getMonth();
+    var il = date.getDate();
+    var yoil = date.getDay();
+    var h = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    var msec = date.getMilliseconds();
+
+    document.write('<h3 class="w3-center">년도 : ' + y + '</h3>');
+    document.write('<h3 class="w3-center">월 : ' + (mon + 1) + '</h3>');
+    document.write('<h3 class="w3-center">일 : ' + il + '</h3>');
+    document.write('<h3 class="w3-center">요일 : ' + yoil + '</h3>');
+    document.write('<h3 class="w3-center">시 : ' + h + '</h3>');
+    document.write('<h3 class="w3-center">분 : ' + min + '</h3>');
+    document.write('<h3 class="w3-center">초 : ' + sec + '</h3>');
+    document.write('<h3 class="w3-center">밀리초 : ' + msec + '</h3>');
+    document.write('<h3 class="w3-center">date : ' + date.toLocaleDateString() + '</h3>');
+    document.write('<h3 class="w3-center">date.toJSON : ' + date.toJSON() + '</h3>');
+    document.write('<h3 class="w3-center">date.toLocalString : ' + date.toLocaleString() + '</h3>');
+    document.write('<h3 class="w3-center">date.toLocalTimeString : ' + date.toLocaleTimeString() + '</h3>');
+    document.write('<h3 class="w3-center">date.toUTCString : ' + date.toUTCString() + '</h3>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

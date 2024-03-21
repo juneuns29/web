@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    
+</script>
+</head>
+<body>
+    <form class="w3-content w3-center mxw700">
+        <h1 class="w3-pink w3-padding w3-round-large w3-card-4">정규표현식 검사</h1>
+        <div class="w3-container w3-padding w3-margin-top w3-round-large w3-card-4 pdh30">
+            <div class="w3-col w3-padding">
+                <label for="msg" class="w3-col m3 w3-right-align w3-text-gray lbl">문자열 입력 : </label>
+                <input type="text" class="w3-col m7 w3-input w3-border"
+                        name="msg" id="msg" placeholder="문자열을 입력하세요.">
+            </div>
+        </div>
+
+        <div class="w3-col w3-margin-top w3-card-4 w3-round-large frHidden">
+            <div class="w3-third w3-button w3-green w3-hover-lime" id="btn1">타이틀 배경색 변경</div>
+            <div class="w3-third w3-button w3-blue w3-hover-lime" id="btn2">라벨 폰트 크기 변경</div>
+            <div class="w3-third w3-button w3-deep-purple w3-hover-lime" id="btn3">none</div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        document.getElementById('btn1').onclick = function(){
+            var ele = document.getElementsByTagName('h1')[0];
+            ele.setAttribute('class', 'w3-padding w3-round-large w3-card-4');
+            // ele.style.backgroundColor = 'orange';
+            ele.style = 'background-color: orange; height: 150px; border: 25px dotted pink; line-height: 200%; font-weight: bold; font-size: 32pt; color: white;';
+        };
+        document.getElementById('btn2').onclick = function(){
+            document.getElementsByClassName('lbl')[0].style.fontSize = '17pt';
+            document.getElementsByClassName('lbl')[0].style.lineHeight = '130%';
+        };
+        document.getElementById('btn3').onclick = function(){
+            document.querySelectorAll('form > div:nth-child(2)')[0].style.display = 'none';
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript">
+    
+</script>
+</head>
+<body>
+    <form class="w3-content w3-center mxw700" id="frm">
+        <h1 class="w3-pink w3-padding w3-round-large w3-card-4">정규표현식 검사</h1>
+        <div class="w3-container w3-padding w3-margin-top w3-round-large w3-card-4 pdh30">
+            <div class="w3-col w3-padding">
+                <label for="msg" class="w3-col m3 w3-right-align w3-text-gray lbl">문자열 입력 : </label>
+                <input type="text" class="w3-col m7 w3-input w3-border"
+                        name="msg" id="msg" placeholder="문자열을 입력하세요.">
+            </div>
+        </div>
+        <a href="#btn3">btn3</a>
+        <div class="w3-col w3-margin-top w3-card-4 w3-round-large frHidden">
+            <div class="w3-third w3-button w3-green w3-hover-lime" id="btn1">Mozilla Site</div>
+            <div class="w3-third w3-button w3-blue w3-hover-lime" id="btn2">창이름주고 이동</div>
+            <div class="w3-third w3-button w3-deep-purple w3-hover-lime" id="btn3">검사</div>
+        </div>
+    </form>
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
+
+    <script type="text/javascript">
+        alert(location.hash);
+        alert(location.search);
+        // btn1 클릭이벤트
+        document.getElementById('btn1').onclick = function(){
+            window.open('https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp');
+        };
+        document.getElementById('btn2').onclick = function(){
+            window.open('https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp',
+            'moz',
+            'width=500, height=600, scrollbars=no, resizable=no, toolbar=no, menubar=yes, status=no, location=no'
+            );
+        };
+        document.getElementById('btn3').onclick = function(){
+            // window.close();
+            // location.href = '#frm';
+            location.href = 'test02.html?id=jennie&pw=12345&name=제니';
+        };
+    </script>
+</body>
+</html>
