@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center" id="fr"></div>
+
+    <script type="text/javascript">
+        var ele = document.getElementById('fr');
+
+        // ele 태그에 h1 태그 추가
+        // 먼저 태그를 만든다.
+        var newT = document.createElement('h1');
+        // 태그의 내용을 작성한다.
+        newT.innerHTML = '만들어서 추가된 h1 태그';
+        newT.setAttribute('class', 'w3-blue w3-padding w3-card-4');
+        newT.setAttribute('id', 'h1');
+
+        // 만들어진 태그를 #fr 태그 하위 추가
+        ele.appendChild(newT);
+
+        var cList = ele.classList; // classList : 클래스 속성값들을 배열로 기억하는 속성
+        
+        // p 태그 생성해서 추가
+        for(var i = 0 ; i < cList.length ; i++ ){
+            var secondT = document.createElement('p');
+            secondT.setAttribute('class', 'inblock imgBox w3-pink w3-button');
+            secondT.innerHTML = cList[i];
+            
+            //  태그를 fr 태그에 추가
+            ele.appendChild(secondT);
+        }
+    </script>
+</body>
+</html>

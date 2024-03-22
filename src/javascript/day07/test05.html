@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    var member = [
+        {
+            'name': 'jennie',
+            'age': '28',
+            'mail': 'jennie@human.com',
+            'tel': '010-1212-1212'
+        },
+        {
+            'name': 'lisa',
+            'age': '26',
+            'mail': 'lisa@human.com',
+            'tel': '010-2424-2424'
+        },
+        {
+            'name': 'rose',
+            'age': '27',
+            'mail': 'rose@human.com',
+            'tel': '010-5757-5757'
+        },
+        {
+            'name': 'jisoo',
+            'age': '29',
+            'mail': 'jisoo@human.com',
+            'tel': '010-2626-2626'
+        }
+    ];
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <h1 class="w3-pink w3-padding w3-card-4">Black Pink</h1>
+        <div class="w3-container w3-card-4 w3-padding" id="fr"></div>
+    </div>
+    <script type="text/javascript">
+        // member 의 데이터를 추출해서 #fr 태그에 채우세요.
+
+        var names = [];
+        for(var i = 0 ; i < member.length ; i++ ){
+            names[i] = member[i].name;
+        }
+
+        var el = document.createElement('div');
+        el.setAttribute('class', 'w3-col w3-margin-top');
+        el.setAttribute('id', 'bfr');
+
+        for(var i = 0 ; i < names.length ; i++ ){
+            var in_el = document.createElement('div');
+            in_el.setAttribute('class', 'w3-quarter w3-button ' + colorList[i]);
+            in_el.setAttribute('id', names[i]);
+            in_el.innerHTML = names[i];
+
+            el.appendChild(in_el);
+        }
+        
+        document.getElementsByClassName('mxw650')[0].appendChild(el);
+
+
+
+    </script>
+</body>
+</html>

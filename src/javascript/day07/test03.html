@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center" id="fr">w3-content
+        <h1 class="w3-card-4">h1 title</h1>
+        <div class="inblock imgBox">img Box1</div>
+        <div class="inblock imgBox">img Box2</div>
+        <div class="inblock imgBox">img Box3</div>
+        <div class="inblock imgBox">img Box4</div>
+        <div class="inblock imgBox">img Box5</div>
+    </div>
+    <script type="text/javascript">
+        var ele = document.getElementById('fr');
+        // ele.childNodes[0].parentNode.style.color = 'red';
+
+        // ele.fisrtChild.style.color = 'blue'; // 첫번째 노드 선택
+        var txt = ele.firstChild.nodeValue;
+        // alert(txt);
+        ele.firstChild.nodeValue = '첫번째 노드';
+
+        var txt = ele.childNodes[1].nodeValue;
+        alert(txt);
+
+        var n = ele.childNodes;
+
+        for(var i = 0 ; i < n.length ; i++ ){
+            var t = n[i].nodeValue;
+            if(!t){
+                // 일반 태그인 경우
+                t = n[i].innerHTML;
+            }
+            document.write('<p>' + t + '</p>');
+        }
+
+        // ele.children[2].previousSibling.style.color = 'blue'; // 줄바꿈과 탭키로 연결된 텍스트 노드 선택
+    </script>
+</body>
+</html>
