@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#login').click(function(){
+            // 할일
+            // 입력내용 읽고
+            // 아이디
+            // 유효성 검사하고
+            var sid = $('#tid').val();
+            if(!sid){
+                // 아이디가 입력 안된 경우
+                $('#tid').focus();
+                return;
+            }
+
+            // 비번
+            var spw = $('#tpw').val();
+            if(!spw){
+                // 비밀번호가 입력안된 경우
+                $('#tpw').focus();
+                return;
+            }
+
+            // 태그에 읽은 내용을 추가
+            /*
+            // 1.
+            $('#id').val(sid);
+            $('#pw').val(spw);
+            */
+            
+            // 2.
+            $('#frm').append('<input type="hidden" name="id" value="' + sid + '">');
+            $('#frm').append('<input type="hidden" name="pw" value="' + spw + '">');
+
+            $('#frm').submit();
+        });
+    });
+</script>
+</head>
+<body>
+    <form method="GET" action="result.html" name="frm" id="frm">
+        <!--
+            <input type="hidden" name="id" id="id">
+            <input type="hidden" name="pw" id="pw">
+        -->
+    </form>
+
+    <div class="w3-content mxw650">
+        <h1 class="w3-blue w3-padding w3-card-4 w3-center">Login</h1> 
+        <div class="w3-col w3-padding w3-card-4">
+            <div class="w3-col w3-padding">
+                <label for="tid" class="w3-col m3 lbl w3-text-gray w3-right-align">아이디 : </label>
+                <div class="w3-col m8">
+                    <input type="text" id="tid" 
+                            placeholder="아이디를 입력하세요."
+                            class="w3-col w3-input w3-border">
+                </div>
+            </div>
+            <div class="w3-col w3-padding">
+                <label for="tpw" class="w3-col m3 lbl w3-text-gray w3-right-align">비밀번호 : </label>
+                <div class="w3-col m8">
+                    <input type="password" id="tpw" 
+                            placeholder="비밀번호를 입력하세요."
+                            class="w3-col w3-input w3-border">
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-col w3-margin-top">
+            <button type="button" class="w3-half w3-button w3-orange" id="reset">reset</button>
+            <button type="button" class="w3-half w3-button w3-blue" id="login">login</button>
+        </div>
+    </div>
+</body>
+</html>
