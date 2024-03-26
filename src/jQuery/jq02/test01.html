@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('h3:contains("h3 - 3")').addClass('w3-padding w3-blue');
+
+        $('.mxw650').contents().addClass('w3-round-xlarge');
+
+        $('div').filter('.mxw650').children().eq(0).removeClass('w3-round-xlarge').addClass('w3-round-large');
+
+        // alert($('.w3-col').eq(1).is('h3'));
+
+        $('h3.w3-col').each(function(idx, tag){
+            $('.mxw650').append('<div class="inblock imgBox w3-center mgw10 ' + 
+                                            colorList[idx] + '">' + $(tag).html() + '</div>');
+        });
+
+        $('h3:last').click(function(){
+            $(this).toggleClass('w3-lime');
+        });
+
+        $('h1').click(function(){
+            $(this).next().slideToggle(300);
+        });
+    });
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <h1 class="w3-pink w3-padding w3-card-4">콘텐츠 탐색 선택자</h1>
+        <div class="w3-col w3-padding w3-card-4">
+            <h3 class="w3-col">h3 - 1</h3>
+            <h3 class="w3-col">h3 - 2</h3>
+            <h3 class="w3-col">h3 - 3</h3>
+            <h3 class="w3-col">h3 - 4</h3>
+            <h3 class="w3-col">h3 - 5</h3>
+        </div>
+    </div>
+</body>
+</html>
