@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    var no = 0;
+
+    function getNo(){
+        no = no + 1;
+        return no;
+    }
+
+    $(document).ready(function(){
+        // 타이틀 클릭이벤트
+        $('#title').click(function(){
+            // append()
+            var idx = getNo();
+            var sel = '<div class="w3-button ' + colorList[idx - 1] + 
+                                '" id="btn'+ idx +'">btn' + idx + '</div>';
+            if(idx % 2 == 0){
+                $('#fr').prepend(sel); // 첫번째 자식 태그로 추가
+            } else {
+                $('#fr').append(sel);  // 마지막 자식 태그로 추가
+            }
+
+            // 추가된 태그 클릭이벤트
+            $('#btn' + idx).click(function(){
+                var txt = $(this).html();
+                var tid = $(this).attr('id');
+                alert(txt + ' - ' + tid);
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center" id="fr">
+        <h1 class="w3-blue w3-padding w3-card-4" id="title">태그 추가</h1>
+    </div>
+</body>
+</html>

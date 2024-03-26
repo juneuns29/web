@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var c1 = document.createElement('div');
+        c1 = $(c1); // 제이쿼리 함수를 사용할 예정이므로 제이쿼리 객체로 변환
+        // c1 = c1.get(0); // 제이쿼리 객체를 자바스크립트 객체로 변환
+        c1.addClass('w3-content mxw650 w3-center');
+
+        var h1tag = document.createElement('h1');
+        h1tag = $(h1tag).addClass('w3-blue w3-padding w3-card-4').html('jQuery 태그 추가');
+        // c1에 h1태그 추가
+        c1.prepend(h1tag);
+
+        // div 태그 추가
+        var c2 = document.createElement('div');
+        c2 = $(c2).addClass('w3-col w3-card-4 w3-padding');
+        // c1에 c2 추가
+        c1.append(c2);
+
+        // body에 c1 추가
+        $('body').prepend(c1);
+    });
+</script>
+</head>
+<body>
+
+</body>
+</html>
