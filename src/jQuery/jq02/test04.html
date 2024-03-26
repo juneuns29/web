@@ -8,7 +8,19 @@
 <script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../js/colorClass.js"></script>
 <script type="text/javascript">
-    
+    $(document).ready(function(){
+        $('#reset').click(function(){
+            var sprop = $('#id').prop('required');
+            if(sprop){
+                $('#id').prop('required', false);
+                $('#id').prop('readonly', true);
+            } else {
+                $('#id').prop('required', true);
+            }
+            $('#pw').prop('required', true);
+            // alert(sprop);
+        });
+    });
 </script>
 </head>
 <body>
@@ -20,7 +32,7 @@
             <div class="w3-col m8">
                 <input type="text" name="id" id="id" 
                         placeholder="아이디를 입력하세요."
-                        class="w3-col w3-input w3-border">
+                        class="w3-col w3-input w3-border" required>
             </div>
         </div>
         <div class="w3-col w3-padding">
@@ -32,8 +44,8 @@
             </div>
         </div>
         <div class="w3-col w3-margin-top">
-            <div class="w3-half w3-button w3-orange" id="reset">reset</div>
-            <div class="w3-half w3-button w3-blue" id="login">login</div>
+            <button type="button" class="w3-half w3-button w3-orange" id="reset">reset</button>
+            <button type="submit" class="w3-half w3-button w3-blue" id="login">login</button>
         </div>
     </form>
 </body>
