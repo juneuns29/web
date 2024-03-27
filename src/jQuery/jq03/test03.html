@@ -18,15 +18,9 @@
         no2: 20
     };
     $(document).ready(function(){
-        $('.w3-btn').on({
-            click: function(){
-                var txt = $(this).html();
-                $('#data').append('<p class="w3-border w3-border-blue">' + txt + '</p>');
-            },
-            dblclick: function(){
-                // 다수의 이벤트를 동시에 추가할 수 있다.
-
-            }
+        $('#fr').on('click', '.w3-btn', function(){
+            var txt = $(this).html();
+            $('#data').append('<p class="w3-border w3-border-blue">' + txt + '</p>');
         });
 
         $('h1').click(function(){
