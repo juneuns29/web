@@ -18,13 +18,35 @@
         no2: 20
     };
     $(document).ready(function(){
+        // 동적 이벤트 추가 방법
+        /*
+            $(상위태그선택자).on('이벤트이름', '적용시킬태그선택자', function(){
+                처리내용.....
+            });
+        */
+       
         $('#fr').on('click', '.w3-btn', function(){
+            var txt = $(this).html();
+            $('#data').append('<p class="w3-border w3-border-blue">' + txt + '</p>');
+        });
+        
+
+        $('.w3-btn').click(function(){
             var txt = $(this).html();
             $('#data').append('<p class="w3-border w3-border-blue">' + txt + '</p>');
         });
 
         $('h1').click(function(){
-            $('#fr').append('<div class="w3-btn w3-blue mgw10 mgt10">btn' + getNo() + '</div>');
+            var num = getNo();
+            $('#fr').append('<div class="w3-btn w3-blue mgw10 mgt10">btn' + num + '</div>');
+            
+            /*
+            $('#fr').append('<div class="w3-btn w3-blue mgw10 mgt10" id="btn' + num + '">btn' + num + '</div>');
+            $('#btn' + num).click(function(){
+                var txt = $(this).html();
+                $('#data').append('<p class="w3-border w3-border-blue">' + txt + '</p>');
+            });
+            */
         });
     });
 </script>

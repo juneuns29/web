@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        for(var i = 0 ; i < 9 ; i++ ){
+            $('#btnfr').append('<div class="inblock mgw10 mgt10 w3-btn ' + colorList[i] + 
+                                    '" id="btn' + (i+1) + '">btn' + (i+1) + '</div>')
+        }
+/*
+        $('#btn1').click(function(){
+            $('img:visible').hide(300);
+            $('img:hidden').show(300);
+        });
+
+        $('#btn2').click(function(){
+            $('img').toggle(300);
+        });
+
+        $('#btn3').click(function(){
+            $('img:visible').slideUp(500);
+            $('img:hidden').slideDown(500);
+        });
+
+        $('#btn4').click(function(){
+            $('img').slideToggle(500);
+        });
+
+        $('#btn5').click(function(){
+            $('img:hidden').fadeIn(500);
+        });
+
+        $('#btn6').click(function(){
+            $('img:visible').fadeOut(500);
+        });
+
+        $('#btn7').click(function(){
+            $('img').fadeToggle(1000);
+        });
+
+        $('#btn8').click(function(){
+            $('img:visible').fadeTo(500, 0.3);
+        });
+
+        $('#btn9').click(function(){
+            $('img:visible').fadeTo(50, 1);
+        });
+*/
+
+        // 클릭되는 태그의 아이디를 읽어서 조건처리로 이벤트 처리하세요. 
+
+    });
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <h1 class="w3-blue w3-padding w3-card-4">jQuery Animation</h1>
+        <div class="w3-col" id="btnfr"></div>
+        <div class="w3-col w3-margin-top w3-padding">
+            <img src="../../img/ania.jpg" width="650px" height="auto">
+        </div>
+    </div>
+</body>
+</html>
