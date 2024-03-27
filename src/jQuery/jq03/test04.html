@@ -55,6 +55,54 @@
 
         // 클릭되는 태그의 아이디를 읽어서 조건처리로 이벤트 처리하세요. 
 
+        $('.w3-btn').click(function(){
+            // 여기서 조건처리
+            var tid = $(this).attr('id');
+
+            /*
+            if(tid == 'btn1'){
+
+            } else if(tid == 'btn2'){
+
+            } else if(tid){
+
+            } else {
+                ...
+            }
+            */
+
+            switch(tid){
+            case 'btn1':
+                $('img:visible').hide(300);
+                $('img:hidden').show(300);
+                break;
+            case 'btn2':
+                $('img').toggle(300);
+                break;
+            case 'btn3':
+                $('img:visible').slideUp(500);
+                $('img:hidden').slideDown(500);
+                break;
+            case 'btn4':
+                $('img').slideToggle(500);
+                break;
+            case 'btn5':
+                $('img:hidden').fadeIn(500);
+                break;
+            case 'btn6':
+                $('img:visible').fadeOut(500);
+                break;
+            case 'btn7':
+                $('img').fadeToggle(1000);
+                break;
+            case 'btn8':
+                $('img:visible').fadeTo(500, 0.3);
+                break;
+            case 'btn9':
+                $('img').fadeTo(500, 1);
+                break;
+            }
+        });
     });
 </script>
 </head>
