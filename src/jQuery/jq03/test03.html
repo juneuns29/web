@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    var no = 1;
+    function getNo(){
+        no += 1;
+        return no;
+    }
+    var obj = {
+        no1: 10,
+        no2: 20
+    };
+    $(document).ready(function(){
+        $('.w3-btn').on({
+            click: function(){
+                var txt = $(this).html();
+                $('#data').append('<p class="w3-border w3-border-blue">' + txt + '</p>');
+            },
+            dblclick: function(){
+                // 다수의 이벤트를 동시에 추가할 수 있다.
+
+            }
+        });
+
+        $('h1').click(function(){
+            $('#fr').append('<div class="w3-btn w3-blue mgw10 mgt10">btn' + getNo() + '</div>');
+        });
+    });
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <h1 class="w3-green w3-padding w3-card-4">jQuery Event 추가</h1>
+        <div class="w3-col w3-margin-top" id="fr">
+            <div class="w3-btn w3-blue mgw10 mgt10">btn1</div>
+        </div>
+        <div class="w3-col w3-margin-top" id="data"></div>
+    </div>
+</body>
+</html>

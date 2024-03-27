@@ -6,19 +6,48 @@
 <link rel="stylesheet" type="text/css" href="../../../css/w3.css">
 <link rel="stylesheet" type="text/css" href="../../../css/user.css">
 <script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../js/colorClass.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         var el = document.createElement('img');
-        $(el).attr('src', '../../img/chopper.jpg');
-        $(el).css('width', '300px').css('height', 'auto');
+        $(el).attr('src', '../../../../bio/bio/WebContent/resources/image/anya.jpg');
+        $(el).css('width', '500px').css('height', 'auto');
         $('#fr').append(el);
-
+        
         var el1 = document.createElement('img');
-        $(el1).attr('src', '../../img/chopper02.jpg');
-        $(el1).css('width', '300px').css('height', 'auto');
+        $(el1).attr('src', '../../../../bio/bio/WebContent/resources/image/anya2.png');
+        $(el1).css('width', '500px').css('height', 'auto');
+        $(el1).click(function(){
+            $(this).stop().slideToggle(500);
+        });
+
+        $(el).dblclick(function(){
+            $('img:hidden').slideDown(500);
+        });
 
         $(el1).appendTo('#fr1');
+
+        $(el1).hover(function(){
+            $(this).toggleClass('w3-topbar w3-bottombar w3-border-pink');
+        });
+        /*
+        $(el1).mouseover(function(){
+            $(this).addClass('w3-topbar w3-bottombar w3-border-pink');
+        });
+        $(el1).mouseout(function(){
+            $(this).removeClass('w3-topbar w3-bottombar w3-border-pink');
+        });
+        */
+        $('#name').focusout(function(){
+            var txt = $(this).val();
+            $(this).parent().parent().append('<h2 class="w3-col m2 w3-pink w3-button w3-padding mgw10">' + txt + '</h2>')
+        });
+
+        $('#nick').change(function(){
+            var txt = $(this).val();
+            $(this).parent().parent().prepend('<h2 class="w3-col m2 w3-green w3-button w3-padding mgw10">' + txt + '</h2>');
+        });
     });
 </script>
 </head>
@@ -27,6 +56,16 @@
         <div class="w3-col" id="fr"></div>
         <hr style="clear: both;">
         <div class="w3-col" id="fr1"></div>
+        <div class="w3-col w3-padding w3-margin-top w3-card-4" id="fr2">
+            <div class="w3-col">
+                <label for="name" class="w3-col m3 lbl pdr10">이 름 : </label>
+                <input type="text" name="name" id="name" class="w3-col m7 w3-input w3-border">
+            </div>
+            <div class="w3-col w3-margin-top">
+                <label for="nick" class="w3-col m3 lbl pdr10">닉네임 : </label>
+                <input type="text" name="nick" id="nick" class="w3-col m7 w3-input w3-border">
+            </div>
+        </div>
     </div>
 </body>
 </html>
