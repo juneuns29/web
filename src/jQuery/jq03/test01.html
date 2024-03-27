@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('h1').click(function(){
+            /*
+            $('h1').toggleClass('w3-blue w3-pink');
+            $('div').filter('.mxw650, .mxw800').toggleClass('mxw650 mxw800');
+            */
+            
+            if($(this).hasClass('w3-blue')){
+                $(this).removeClass('w3-blue').addClass('w3-pink');
+            } else {
+                $(this).removeClass('w3-pink').addClass('w3-blue');
+            }
+            
+            if($(this).parent().hasClass('mxw650')){
+                $(this).parent().removeClass('mxw650').addClass('mxw800');
+            } else {
+                $(this).parent().removeClass('mxw800').addClass('mxw650');
+            }
+        });
+
+        $('#h1').click(function(){
+            $(this).attr('id', '');
+        });
+
+        $('#h2').click(function(){
+            $(this).removeAttr('id');
+        });
+    });
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <h1 class="w3-blue w3-padding w3-card-4" id="h1">toggleClass</h1>
+        <h1 class="w3-blue w3-padding w3-card-4" id="h2">toggleClass2</h1>
+    </div>
+</body>
+</html>

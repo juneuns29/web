@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var el = document.createElement('img');
+        $(el).attr('src', '../../img/chopper.jpg');
+        $(el).css('width', '300px').css('height', 'auto');
+        $('#fr').append(el);
+
+        var el1 = document.createElement('img');
+        $(el1).attr('src', '../../img/chopper02.jpg');
+        $(el1).css('width', '300px').css('height', 'auto');
+
+        $(el1).appendTo('#fr1');
+    });
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center">
+        <div class="w3-col" id="fr"></div>
+        <hr style="clear: both;">
+        <div class="w3-col" id="fr1"></div>
+    </div>
+</body>
+</html>
