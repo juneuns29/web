@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../../css/w3.css">
 <link rel="stylesheet" type="text/css" href="../../css/user.css">
-<script type="text/javascript" src="../../js/jquery-3.7.1-min.js"></script>
+<script type="text/javascript" src="../../js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('#chkBtn').click(function(){
@@ -115,11 +115,12 @@
                         로 내부적으로 처리될 것이므로
                         매개변수로 선언해놓은 data는 JSON 객체가 된다.
                         따라서 그 객체의 내용을 사용할 때는
-                            data.키값
+                        data.키값
                         의 형태로 사용하면 된다.
-                    */
+                        */
                     var result = data.result;
-
+                       
+                    // 태그 처리하고
                     // 꺼낸결과로 조건처리
                     if(result){
                         // 메세지 채워넣고
@@ -138,11 +139,11 @@
                         // w3-hide 클래스 제거하고
                         $('#idmsg').removeClass('w3-hide');
                     }
+                },
+                error: function(){
+                    alert('# 서버와의 통신에 에러가 발생했습니다.');
                 }
             });
-
-            // 태그 처리하고
-
         });
     });
 </script>
@@ -218,19 +219,19 @@
                     <div class="w3-col w3-center w3-hide" id="mAvt">
                         <div class="inblock avtBox w3-center">
                             <label for="11" class="inblock imgBox">
-                                <img src="../../../image/avatar/img_avatar11.png" class="avtimg">
+                                <img src="../../image/avatar/img_avatar11.png" class="avtimg">
                             </label>
                             <input type="radio" name="avt" id="11" class="w3-radio avtrdo" value="11">
                         </div>
                         <div class="inblock avtBox w3-center">
                             <label for="12" class="inblock imgBox">
-                                <img src="../../../image/avatar/img_avatar12.png" class="avtimg">
+                                <img src="../../image/avatar/img_avatar12.png" class="avtimg">
                             </label>
                             <input type="radio" name="avt" id="12" class="w3-radio avtrdo" value="12">
                         </div>
                         <div class="inblock avtBox w3-center">
                             <label for="13" class="inblock imgBox">
-                                <img src="../../../image/avatar/img_avatar13.png" class="avtimg">
+                                <img src="../../image/avatar/img_avatar13.png" class="avtimg">
                             </label>
                             <input type="radio" name="avt" id="13" class="w3-radio avtrdo" value="13">
                         </div>
@@ -238,19 +239,19 @@
                     <div class="w3-col w3-center w3-hide" id="fAvt">
                         <div class="inblock avtBox w3-center">
                             <label for="21" class="inblock imgBox">
-                                <img src="../../../image/avatar/img_avatar21.png" class="avtimg">
+                                <img src="../../image/avatar/img_avatar21.png" class="avtimg">
                             </label>
                             <input type="radio" name="avt" id="21" class="w3-radio avtrdo" value="21">
                         </div>
                         <div class="inblock avtBox w3-center">
                             <label for="22" class="inblock imgBox">
-                                <img src="../../../image/avatar/img_avatar22.png" class="avtimg">
+                                <img src="../../image/avatar/img_avatar22.png" class="avtimg">
                             </label>
                             <input type="radio" name="avt" id="22" class="w3-radio avtrdo" value="22">
                         </div>
                         <div class="inblock avtBox w3-center">
                             <label for="23" class="inblock imgBox">
-                                <img src="../../../image/avatar/img_avatar23.png" class="avtimg">
+                                <img src="../../image/avatar/img_avatar23.png" class="avtimg">
                             </label>
                             <input type="radio" name="avt" id="23" class="w3-radio avtrdo" value="23">
                         </div>
