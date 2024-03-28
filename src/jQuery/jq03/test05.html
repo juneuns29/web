@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../../css/user.css">
+<script type="text/javascript" src="../../../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/colorClass.js"></script>
+<style type="text/css">
+    #menu {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+    
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#menu').children('li:eq(1)').css('border', '5px dotted pink').end().css('border', '10px solid lightgray');
+    });
+</script>
+</head>
+<body>
+    <div class="w3-content mxw650 w3-center" id="fr">
+        <h1 class="w3-blue w3-padding w3-card-4">end()</h1>
+        <div class="w3-col w3-margin-top w3-card-4">
+            <ul id="menu">
+                <li>아냐</li>
+                <li>로이드</li>
+                <li>요르</li>
+                <li>본드</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
